@@ -1,0 +1,4 @@
+dataset,completion_rate_0.5m,median_final_goal_error_m,median_speed_m_s,center_median_speed_m_s,minimum_pair_distance_m,close_contact_frame_rate_lt_0.6m,right_routes,left_routes,central_routes,right_share_excluding_central,conflict_events,deceleration_events,turning_events,avoidance_events,hard_core_activation_rate,maximum_hard_core_correction_m
+observed,0.984375,0.294838,1.383423,1.120276,0.228894,0.738824,44,15,5,0.745763,287,196,394,334,,
+predictive_model,0.968750,0.269172,1.478217,1.114938,0.391578,0.929412,59,4,1,0.936508,304,136,178,186,0.008860,0.018264
+straight_baseline,1.000000,0.264518,1.889600,1.899994,0.002324,0.538824,1,0,63,1.000000,81,64,100,12,0.000000,0.000000

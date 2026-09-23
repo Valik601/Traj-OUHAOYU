@@ -1,0 +1,5 @@
+event_type,events,pedestrians,median_duration_s,median_radius_m,median_min_speed_m_s,median_nearest_distance_m
+avoidance,334,64,0.360000,5.341760,1.043122,0.728747
+conflict,287,64,0.600000,8.882057,0.902282,0.779294
+deceleration,196,64,0.480000,8.546069,0.839868,0.862181
+turning,394,64,0.280000,8.719599,0.811260,0.820152

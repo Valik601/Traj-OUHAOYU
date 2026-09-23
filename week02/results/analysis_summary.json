@@ -1,0 +1,44 @@
+{
+  "samples": 27200,
+  "pedestrians": 64,
+  "frames": 425,
+  "duration_s": 16.96,
+  "median_speed_m_s": 1.3834231276827074,
+  "right_routes": 44,
+  "left_routes": 15,
+  "central_routes": 5,
+  "right_share_excluding_central": 0.7457627118644068,
+  "right_preference_binomial_p": 0.00010186092870392849,
+  "center_median_speed_m_s": 1.1963979330253456,
+  "approach_median_speed_m_s": 1.8752973746940174,
+  "paired_speed_pedestrians": 37,
+  "paired_speed_wilcoxon_p": 7.236667443066835e-08,
+  "center_conflict_rate": 1.0,
+  "approach_conflict_rate": 0.44642857142857145,
+  "paired_conflict_wilcoxon_p": 6.723141222030607e-08,
+  "center_avoidance_rate": 0.4318181818181818,
+  "approach_avoidance_rate": 0.0,
+  "paired_avoidance_wilcoxon_p": 2.4850757123943993e-07,
+  "event_counts": {
+    "avoidance": 334,
+    "conflict": 287,
+    "deceleration": 196,
+    "turning": 394
+  },
+  "event_center_share": {
+    "avoidance": 0.16167664670658682,
+    "conflict": 0.04878048780487805,
+    "deceleration": 0.09693877551020408,
+    "turning": 0.1649746192893401
+  },
+  "thresholds": {
+    "fps": 25.0,
+    "smoothing_window_frames": 15,
+    "body_diameter_m": 0.6,
+    "conflict_predicted_separation_m": 0.8,
+    "conflict_horizon_s": 2.0,
+    "deceleration_m_s2": -0.6,
+    "turn_rate_deg_s": 35.0,
+    "center_radius_m": 2.0
+  }
+}

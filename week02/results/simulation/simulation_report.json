@@ -1,0 +1,152 @@
+{
+  "model": "predictive candidate-velocity model with biased tactical routing",
+  "parameters": {
+    "dt": 0.04,
+    "desired_speed": 1.9,
+    "body_radius": 0.22,
+    "perception_radius": 5.0,
+    "rear_awareness_radius": 1.2,
+    "field_of_view_deg": 220.0,
+    "prediction_horizon": 2.0,
+    "comfort_clearance": 0.72,
+    "emergency_clearance": 0.44,
+    "reaction_time": 0.42,
+    "max_acceleration": 2.6,
+    "max_deceleration": 3.4,
+    "max_speed_factor": 1.12,
+    "goal_tolerance": 0.3,
+    "waypoint_tolerance": 0.65,
+    "route_offset": 2.0,
+    "right_choice_logit": 1.05,
+    "left_choice_logit": 0.0,
+    "central_choice_logit": -1.0,
+    "speed_cost": 1.0,
+    "smoothness_cost": 0.18,
+    "collision_cost": 8.0,
+    "emergency_cost": 45.0,
+    "right_action_bonus": 0.25,
+    "hard_core_distance": 0.4,
+    "projection_iterations": 4,
+    "seed": 7
+  },
+  "comparison_metrics": [
+    {
+      "dataset": "observed",
+      "completion_rate_0.5m": 0.984375,
+      "median_final_goal_error_m": 0.2948383101413007,
+      "median_speed_m_s": 1.3834231276827074,
+      "center_median_speed_m_s": 1.1202755666446156,
+      "minimum_pair_distance_m": 0.22889379043678126,
+      "close_contact_frame_rate_lt_0.6m": 0.7388235294117647,
+      "right_routes": 44,
+      "left_routes": 15,
+      "central_routes": 5,
+      "right_share_excluding_central": 0.7457627118644068,
+      "conflict_events": 287,
+      "deceleration_events": 196,
+      "turning_events": 394,
+      "avoidance_events": 334,
+      "hard_core_activation_rate": NaN,
+      "maximum_hard_core_correction_m": NaN
+    },
+    {
+      "dataset": "predictive_model",
+      "completion_rate_0.5m": 0.96875,
+      "median_final_goal_error_m": 0.26917197683637617,
+      "median_speed_m_s": 1.4782167206217323,
+      "center_median_speed_m_s": 1.114937852584307,
+      "minimum_pair_distance_m": 0.3915775291054218,
+      "close_contact_frame_rate_lt_0.6m": 0.9294117647058824,
+      "right_routes": 59,
+      "left_routes": 4,
+      "central_routes": 1,
+      "right_share_excluding_central": 0.9365079365079365,
+      "conflict_events": 304,
+      "deceleration_events": 136,
+      "turning_events": 178,
+      "avoidance_events": 186,
+      "hard_core_activation_rate": 0.008860294117647058,
+      "maximum_hard_core_correction_m": 0.018263952971935688
+    },
+    {
+      "dataset": "straight_baseline",
+      "completion_rate_0.5m": 1.0,
+      "median_final_goal_error_m": 0.2645183829454615,
+      "median_speed_m_s": 1.8896002398113985,
+      "center_median_speed_m_s": 1.8999938268986472,
+      "minimum_pair_distance_m": 0.002323653581575257,
+      "close_contact_frame_rate_lt_0.6m": 0.5388235294117647,
+      "right_routes": 1,
+      "left_routes": 0,
+      "central_routes": 63,
+      "right_share_excluding_central": 1.0,
+      "conflict_events": 81,
+      "deceleration_events": 64,
+      "turning_events": 100,
+      "avoidance_events": 12,
+      "hard_core_activation_rate": 0.0,
+      "maximum_hard_core_correction_m": 0.0
+    }
+  ],
+  "trajectory_errors": {
+    "predictive_model": {
+      "time_aligned_ADE_m": 2.6747729164207596,
+      "time_aligned_median_position_error_m": 2.067433817796423,
+      "median_speed_curve_RMSE_m_s": 0.421709286764592
+    },
+    "straight_baseline": {
+      "time_aligned_ADE_m": 2.2006767423941263,
+      "time_aligned_median_position_error_m": 1.5020113824448824,
+      "median_speed_curve_RMSE_m_s": 0.47453488207993827
+    }
+  },
+  "stability": {
+    "completion_rate_0.5m": {
+      "minimum": 0.703125,
+      "median": 0.9296875,
+      "maximum": 0.984375
+    },
+    "median_final_goal_error_m": {
+      "minimum": 0.26557840642904385,
+      "median": 0.2737794510005258,
+      "maximum": 0.28207946799818184
+    },
+    "minimum_pair_distance_m": {
+      "minimum": 0.3999675952059247,
+      "median": 0.39999999999999925,
+      "maximum": 0.39999999999999974
+    },
+    "close_contact_frame_rate_lt_0.6m": {
+      "minimum": 0.8682352941176471,
+      "median": 0.9411764705882353,
+      "maximum": 0.9694117647058823
+    },
+    "right_share_excluding_central": {
+      "minimum": 0.5833333333333334,
+      "median": 0.7651515151515151,
+      "maximum": 0.8166666666666667
+    },
+    "mean_selected_speed_m_s": {
+      "minimum": 1.2680690472277616,
+      "median": 1.3127114410922436,
+      "maximum": 1.3284611573838898
+    },
+    "avoidance_action_rate": {
+      "minimum": 0.3728626179245283,
+      "median": 0.4095666273584906,
+      "maximum": 0.5130085495283019
+    },
+    "gates": {
+      "all_trials_complete_at_least_90_percent": false,
+      "no_near_coincident_tracks_below_0.35m": true,
+      "right_share_between_55_and_90_percent": true
+    },
+    "stable": false
+  },
+  "avoidance_example_pedestrian": 62,
+  "known_failure_checks": {
+    "near_coincident_tracks_below_0.35m": false,
+    "incomplete_agents_detected": true,
+    "right_bias_outside_observed_95ci_target_rough_range": true
+  }
+}
