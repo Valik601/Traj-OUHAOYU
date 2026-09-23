@@ -1,0 +1,20 @@
+{
+  "source_checkpoints": {
+    "original": "grid_triple_experiment\\models\\social_original_grid.pkl",
+    "no_neighbours": "neighbor_ablation\\models\\social_no_neighbor_information.pkl",
+    "tenth_grid": "grid_tenth_experiment\\models\\social_tenth_grid.pkl",
+    "triple_grid": "grid_triple_experiment\\models\\social_triple_grid.pkl"
+  },
+  "source_data": "DATA_BLOCK/circle_classroom/{val,test}/circle.ndjson",
+  "transformations": [
+    "history-only recursive mean rollout for all 64 tracks",
+    "Euclidean displacement per forecast step",
+    "ADE: mean over 12 steps and 12 scenes",
+    "FDE: mean final-step displacement over 12 scenes"
+  ],
+  "random_seed": 42,
+  "figure_note": "General course-report figures; no publisher compliance claimed",
+  "matplotlib": "3.9.4",
+  "torch": "1.12.1+cpu",
+  "numpy": "1.26.4"
+}

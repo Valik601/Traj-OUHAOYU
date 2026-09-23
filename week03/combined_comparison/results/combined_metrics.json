@@ -1,0 +1,925 @@
+{
+  "summary": [
+    {
+      "split": "val",
+      "model": "original",
+      "ADE": 0.567211389541626,
+      "FDE": 1.0947214365005493,
+      "scenes": 12
+    },
+    {
+      "split": "val",
+      "model": "no_neighbours",
+      "ADE": 0.5111069083213806,
+      "FDE": 0.9797008633613586,
+      "scenes": 12
+    },
+    {
+      "split": "val",
+      "model": "tenth_grid",
+      "ADE": 0.505637526512146,
+      "FDE": 0.9726470112800598,
+      "scenes": 12
+    },
+    {
+      "split": "val",
+      "model": "triple_grid",
+      "ADE": 0.5669281482696533,
+      "FDE": 1.0592924356460571,
+      "scenes": 12
+    },
+    {
+      "split": "val",
+      "model": "constant_velocity",
+      "ADE": 0.23733101785182953,
+      "FDE": 0.4491218328475952,
+      "scenes": 12
+    },
+    {
+      "split": "test",
+      "model": "original",
+      "ADE": 0.7400984168052673,
+      "FDE": 1.4295397996902466,
+      "scenes": 12
+    },
+    {
+      "split": "test",
+      "model": "no_neighbours",
+      "ADE": 0.6796187162399292,
+      "FDE": 1.3027933835983276,
+      "scenes": 12
+    },
+    {
+      "split": "test",
+      "model": "tenth_grid",
+      "ADE": 0.6706497073173523,
+      "FDE": 1.2869954109191895,
+      "scenes": 12
+    },
+    {
+      "split": "test",
+      "model": "triple_grid",
+      "ADE": 0.8723222613334656,
+      "FDE": 1.6345387697219849,
+      "scenes": 12
+    },
+    {
+      "split": "test",
+      "model": "constant_velocity",
+      "ADE": 0.12512816488742828,
+      "FDE": 0.2338729053735733,
+      "scenes": 12
+    }
+  ],
+  "per_scene": [
+    {
+      "split": "val",
+      "scene_id": 56,
+      "model": "original",
+      "ADE": 0.5383638739585876,
+      "FDE": 1.018606185913086
+    },
+    {
+      "split": "val",
+      "scene_id": 56,
+      "model": "no_neighbours",
+      "ADE": 0.37417349219322205,
+      "FDE": 0.7252865433692932
+    },
+    {
+      "split": "val",
+      "scene_id": 56,
+      "model": "tenth_grid",
+      "ADE": 0.37452542781829834,
+      "FDE": 0.727962851524353
+    },
+    {
+      "split": "val",
+      "scene_id": 56,
+      "model": "triple_grid",
+      "ADE": 0.4341007173061371,
+      "FDE": 0.8405301570892334
+    },
+    {
+      "split": "val",
+      "scene_id": 56,
+      "model": "constant_velocity",
+      "ADE": 0.3685370683670044,
+      "FDE": 0.739107608795166
+    },
+    {
+      "split": "val",
+      "scene_id": 57,
+      "model": "original",
+      "ADE": 0.18872016668319702,
+      "FDE": 0.4726244807243347
+    },
+    {
+      "split": "val",
+      "scene_id": 57,
+      "model": "no_neighbours",
+      "ADE": 0.08857148140668869,
+      "FDE": 0.2394336462020874
+    },
+    {
+      "split": "val",
+      "scene_id": 57,
+      "model": "tenth_grid",
+      "ADE": 0.09037530422210693,
+      "FDE": 0.2658997178077698
+    },
+    {
+      "split": "val",
+      "scene_id": 57,
+      "model": "triple_grid",
+      "ADE": 0.19109801948070526,
+      "FDE": 0.39329689741134644
+    },
+    {
+      "split": "val",
+      "scene_id": 57,
+      "model": "constant_velocity",
+      "ADE": 0.10897299647331238,
+      "FDE": 0.08264829218387604
+    },
+    {
+      "split": "val",
+      "scene_id": 58,
+      "model": "original",
+      "ADE": 0.540891706943512,
+      "FDE": 1.0555427074432373
+    },
+    {
+      "split": "val",
+      "scene_id": 58,
+      "model": "no_neighbours",
+      "ADE": 0.5888186097145081,
+      "FDE": 1.174214243888855
+    },
+    {
+      "split": "val",
+      "scene_id": 58,
+      "model": "tenth_grid",
+      "ADE": 0.5751323103904724,
+      "FDE": 1.1513365507125854
+    },
+    {
+      "split": "val",
+      "scene_id": 58,
+      "model": "triple_grid",
+      "ADE": 0.5477707982063293,
+      "FDE": 1.0670982599258423
+    },
+    {
+      "split": "val",
+      "scene_id": 58,
+      "model": "constant_velocity",
+      "ADE": 0.09901753067970276,
+      "FDE": 0.1501591056585312
+    },
+    {
+      "split": "val",
+      "scene_id": 59,
+      "model": "original",
+      "ADE": 0.983335554599762,
+      "FDE": 1.8386762142181396
+    },
+    {
+      "split": "val",
+      "scene_id": 59,
+      "model": "no_neighbours",
+      "ADE": 0.8380905985832214,
+      "FDE": 1.5658384561538696
+    },
+    {
+      "split": "val",
+      "scene_id": 59,
+      "model": "tenth_grid",
+      "ADE": 0.8278717994689941,
+      "FDE": 1.5484801530838013
+    },
+    {
+      "split": "val",
+      "scene_id": 59,
+      "model": "triple_grid",
+      "ADE": 1.1059907674789429,
+      "FDE": 2.063387632369995
+    },
+    {
+      "split": "val",
+      "scene_id": 59,
+      "model": "constant_velocity",
+      "ADE": 0.2132040113210678,
+      "FDE": 0.3759958744049072
+    },
+    {
+      "split": "val",
+      "scene_id": 60,
+      "model": "original",
+      "ADE": 0.560979425907135,
+      "FDE": 1.132375955581665
+    },
+    {
+      "split": "val",
+      "scene_id": 60,
+      "model": "no_neighbours",
+      "ADE": 0.4954564869403839,
+      "FDE": 1.023220181465149
+    },
+    {
+      "split": "val",
+      "scene_id": 60,
+      "model": "tenth_grid",
+      "ADE": 0.49994930624961853,
+      "FDE": 1.0352864265441895
+    },
+    {
+      "split": "val",
+      "scene_id": 60,
+      "model": "triple_grid",
+      "ADE": 0.5965573191642761,
+      "FDE": 1.1461713314056396
+    },
+    {
+      "split": "val",
+      "scene_id": 60,
+      "model": "constant_velocity",
+      "ADE": 0.2569544017314911,
+      "FDE": 0.5796818137168884
+    },
+    {
+      "split": "val",
+      "scene_id": 61,
+      "model": "original",
+      "ADE": 0.3863804340362549,
+      "FDE": 0.6485218405723572
+    },
+    {
+      "split": "val",
+      "scene_id": 61,
+      "model": "no_neighbours",
+      "ADE": 0.2782363295555115,
+      "FDE": 0.43808653950691223
+    },
+    {
+      "split": "val",
+      "scene_id": 61,
+      "model": "tenth_grid",
+      "ADE": 0.3021407723426819,
+      "FDE": 0.4904312491416931
+    },
+    {
+      "split": "val",
+      "scene_id": 61,
+      "model": "triple_grid",
+      "ADE": 0.139115571975708,
+      "FDE": 0.0658932477235794
+    },
+    {
+      "split": "val",
+      "scene_id": 61,
+      "model": "constant_velocity",
+      "ADE": 0.2632157504558563,
+      "FDE": 0.5582469701766968
+    },
+    {
+      "split": "val",
+      "scene_id": 62,
+      "model": "original",
+      "ADE": 0.568082869052887,
+      "FDE": 1.0980772972106934
+    },
+    {
+      "split": "val",
+      "scene_id": 62,
+      "model": "no_neighbours",
+      "ADE": 0.6406103372573853,
+      "FDE": 1.328473448753357
+    },
+    {
+      "split": "val",
+      "scene_id": 62,
+      "model": "tenth_grid",
+      "ADE": 0.626682460308075,
+      "FDE": 1.3040491342544556
+    },
+    {
+      "split": "val",
+      "scene_id": 62,
+      "model": "triple_grid",
+      "ADE": 0.5735187530517578,
+      "FDE": 1.1675690412521362
+    },
+    {
+      "split": "val",
+      "scene_id": 62,
+      "model": "constant_velocity",
+      "ADE": 0.13712505996227264,
+      "FDE": 0.1833491176366806
+    },
+    {
+      "split": "val",
+      "scene_id": 63,
+      "model": "original",
+      "ADE": 0.5911215543746948,
+      "FDE": 1.088337779045105
+    },
+    {
+      "split": "val",
+      "scene_id": 63,
+      "model": "no_neighbours",
+      "ADE": 0.5473877191543579,
+      "FDE": 1.0173174142837524
+    },
+    {
+      "split": "val",
+      "scene_id": 63,
+      "model": "tenth_grid",
+      "ADE": 0.5460453629493713,
+      "FDE": 1.019965648651123
+    },
+    {
+      "split": "val",
+      "scene_id": 63,
+      "model": "triple_grid",
+      "ADE": 0.6956873536109924,
+      "FDE": 1.2203953266143799
+    },
+    {
+      "split": "val",
+      "scene_id": 63,
+      "model": "constant_velocity",
+      "ADE": 0.4802682101726532,
+      "FDE": 0.9600164294242859
+    },
+    {
+      "split": "val",
+      "scene_id": 64,
+      "model": "original",
+      "ADE": 0.6218768954277039,
+      "FDE": 1.2302643060684204
+    },
+    {
+      "split": "val",
+      "scene_id": 64,
+      "model": "no_neighbours",
+      "ADE": 0.6211048364639282,
+      "FDE": 1.2255080938339233
+    },
+    {
+      "split": "val",
+      "scene_id": 64,
+      "model": "tenth_grid",
+      "ADE": 0.6150801777839661,
+      "FDE": 1.2159332036972046
+    },
+    {
+      "split": "val",
+      "scene_id": 64,
+      "model": "triple_grid",
+      "ADE": 0.7320356965065002,
+      "FDE": 1.4369419813156128
+    },
+    {
+      "split": "val",
+      "scene_id": 64,
+      "model": "constant_velocity",
+      "ADE": 0.20813006162643433,
+      "FDE": 0.4384888708591461
+    },
+    {
+      "split": "val",
+      "scene_id": 65,
+      "model": "original",
+      "ADE": 0.3319215476512909,
+      "FDE": 0.7469037175178528
+    },
+    {
+      "split": "val",
+      "scene_id": 65,
+      "model": "no_neighbours",
+      "ADE": 0.27817097306251526,
+      "FDE": 0.396071195602417
+    },
+    {
+      "split": "val",
+      "scene_id": 65,
+      "model": "tenth_grid",
+      "ADE": 0.2511788606643677,
+      "FDE": 0.3325331211090088
+    },
+    {
+      "split": "val",
+      "scene_id": 65,
+      "model": "triple_grid",
+      "ADE": 0.25923576951026917,
+      "FDE": 0.4335387647151947
+    },
+    {
+      "split": "val",
+      "scene_id": 65,
+      "model": "constant_velocity",
+      "ADE": 0.2471456080675125,
+      "FDE": 0.45386719703674316
+    },
+    {
+      "split": "val",
+      "scene_id": 66,
+      "model": "original",
+      "ADE": 0.6415988206863403,
+      "FDE": 1.1101330518722534
+    },
+    {
+      "split": "val",
+      "scene_id": 66,
+      "model": "no_neighbours",
+      "ADE": 0.7502312064170837,
+      "FDE": 1.3863495588302612
+    },
+    {
+      "split": "val",
+      "scene_id": 66,
+      "model": "tenth_grid",
+      "ADE": 0.7356513142585754,
+      "FDE": 1.3591961860656738
+    },
+    {
+      "split": "val",
+      "scene_id": 66,
+      "model": "triple_grid",
+      "ADE": 0.7678974270820618,
+      "FDE": 1.413352370262146
+    },
+    {
+      "split": "val",
+      "scene_id": 66,
+      "model": "constant_velocity",
+      "ADE": 0.1427421271800995,
+      "FDE": 0.23719634115695953
+    },
+    {
+      "split": "val",
+      "scene_id": 67,
+      "model": "original",
+      "ADE": 0.853263795375824,
+      "FDE": 1.6965930461883545
+    },
+    {
+      "split": "val",
+      "scene_id": 67,
+      "model": "no_neighbours",
+      "ADE": 0.6324308514595032,
+      "FDE": 1.2366117238998413
+    },
+    {
+      "split": "val",
+      "scene_id": 67,
+      "model": "tenth_grid",
+      "ADE": 0.6230170130729675,
+      "FDE": 1.2206894159317017
+    },
+    {
+      "split": "val",
+      "scene_id": 67,
+      "model": "triple_grid",
+      "ADE": 0.7601290345191956,
+      "FDE": 1.4633339643478394
+    },
+    {
+      "split": "val",
+      "scene_id": 67,
+      "model": "constant_velocity",
+      "ADE": 0.3226592540740967,
+      "FDE": 0.6307040452957153
+    },
+    {
+      "split": "test",
+      "scene_id": 68,
+      "model": "original",
+      "ADE": 0.735783576965332,
+      "FDE": 1.411706805229187
+    },
+    {
+      "split": "test",
+      "scene_id": 68,
+      "model": "no_neighbours",
+      "ADE": 0.6449027061462402,
+      "FDE": 1.2420589923858643
+    },
+    {
+      "split": "test",
+      "scene_id": 68,
+      "model": "tenth_grid",
+      "ADE": 0.6397377848625183,
+      "FDE": 1.235645055770874
+    },
+    {
+      "split": "test",
+      "scene_id": 68,
+      "model": "triple_grid",
+      "ADE": 0.8001155853271484,
+      "FDE": 1.520011067390442
+    },
+    {
+      "split": "test",
+      "scene_id": 68,
+      "model": "constant_velocity",
+      "ADE": 0.12880359590053558,
+      "FDE": 0.24008490145206451
+    },
+    {
+      "split": "test",
+      "scene_id": 69,
+      "model": "original",
+      "ADE": 0.7348604202270508,
+      "FDE": 1.4103894233703613
+    },
+    {
+      "split": "test",
+      "scene_id": 69,
+      "model": "no_neighbours",
+      "ADE": 0.6939683556556702,
+      "FDE": 1.2894642353057861
+    },
+    {
+      "split": "test",
+      "scene_id": 69,
+      "model": "tenth_grid",
+      "ADE": 0.6908820271492004,
+      "FDE": 1.2867679595947266
+    },
+    {
+      "split": "test",
+      "scene_id": 69,
+      "model": "triple_grid",
+      "ADE": 0.8314587473869324,
+      "FDE": 1.543510913848877
+    },
+    {
+      "split": "test",
+      "scene_id": 69,
+      "model": "constant_velocity",
+      "ADE": 0.22331611812114716,
+      "FDE": 0.3891167640686035
+    },
+    {
+      "split": "test",
+      "scene_id": 70,
+      "model": "original",
+      "ADE": 0.7063665390014648,
+      "FDE": 1.271275520324707
+    },
+    {
+      "split": "test",
+      "scene_id": 70,
+      "model": "no_neighbours",
+      "ADE": 0.7218647599220276,
+      "FDE": 1.3172459602355957
+    },
+    {
+      "split": "test",
+      "scene_id": 70,
+      "model": "tenth_grid",
+      "ADE": 0.7021365761756897,
+      "FDE": 1.2769346237182617
+    },
+    {
+      "split": "test",
+      "scene_id": 70,
+      "model": "triple_grid",
+      "ADE": 1.0720685720443726,
+      "FDE": 1.940901517868042
+    },
+    {
+      "split": "test",
+      "scene_id": 70,
+      "model": "constant_velocity",
+      "ADE": 0.13260270655155182,
+      "FDE": 0.1804066300392151
+    },
+    {
+      "split": "test",
+      "scene_id": 71,
+      "model": "original",
+      "ADE": 0.8175236582756042,
+      "FDE": 1.6117024421691895
+    },
+    {
+      "split": "test",
+      "scene_id": 71,
+      "model": "no_neighbours",
+      "ADE": 0.6664621233940125,
+      "FDE": 1.3205018043518066
+    },
+    {
+      "split": "test",
+      "scene_id": 71,
+      "model": "tenth_grid",
+      "ADE": 0.6596590876579285,
+      "FDE": 1.3106735944747925
+    },
+    {
+      "split": "test",
+      "scene_id": 71,
+      "model": "triple_grid",
+      "ADE": 0.8131348490715027,
+      "FDE": 1.5257261991500854
+    },
+    {
+      "split": "test",
+      "scene_id": 71,
+      "model": "constant_velocity",
+      "ADE": 0.057390641421079636,
+      "FDE": 0.10878870636224747
+    },
+    {
+      "split": "test",
+      "scene_id": 72,
+      "model": "original",
+      "ADE": 0.8427762985229492,
+      "FDE": 1.6277145147323608
+    },
+    {
+      "split": "test",
+      "scene_id": 72,
+      "model": "no_neighbours",
+      "ADE": 0.6569872498512268,
+      "FDE": 1.288935661315918
+    },
+    {
+      "split": "test",
+      "scene_id": 72,
+      "model": "tenth_grid",
+      "ADE": 0.6480202078819275,
+      "FDE": 1.2743916511535645
+    },
+    {
+      "split": "test",
+      "scene_id": 72,
+      "model": "triple_grid",
+      "ADE": 0.8080273270606995,
+      "FDE": 1.5600353479385376
+    },
+    {
+      "split": "test",
+      "scene_id": 72,
+      "model": "constant_velocity",
+      "ADE": 0.05551746487617493,
+      "FDE": 0.12856468558311462
+    },
+    {
+      "split": "test",
+      "scene_id": 73,
+      "model": "original",
+      "ADE": 0.7016950249671936,
+      "FDE": 1.4059382677078247
+    },
+    {
+      "split": "test",
+      "scene_id": 73,
+      "model": "no_neighbours",
+      "ADE": 0.6344425678253174,
+      "FDE": 1.217716097831726
+    },
+    {
+      "split": "test",
+      "scene_id": 73,
+      "model": "tenth_grid",
+      "ADE": 0.6254704594612122,
+      "FDE": 1.2019116878509521
+    },
+    {
+      "split": "test",
+      "scene_id": 73,
+      "model": "triple_grid",
+      "ADE": 0.8079215884208679,
+      "FDE": 1.5644744634628296
+    },
+    {
+      "split": "test",
+      "scene_id": 73,
+      "model": "constant_velocity",
+      "ADE": 0.14253953099250793,
+      "FDE": 0.2870314419269562
+    },
+    {
+      "split": "test",
+      "scene_id": 74,
+      "model": "original",
+      "ADE": 0.5132786631584167,
+      "FDE": 1.0722330808639526
+    },
+    {
+      "split": "test",
+      "scene_id": 74,
+      "model": "no_neighbours",
+      "ADE": 0.5308851003646851,
+      "FDE": 1.0895999670028687
+    },
+    {
+      "split": "test",
+      "scene_id": 74,
+      "model": "tenth_grid",
+      "ADE": 0.5198104977607727,
+      "FDE": 1.0726125240325928
+    },
+    {
+      "split": "test",
+      "scene_id": 74,
+      "model": "triple_grid",
+      "ADE": 0.8638506531715393,
+      "FDE": 1.6719263792037964
+    },
+    {
+      "split": "test",
+      "scene_id": 74,
+      "model": "constant_velocity",
+      "ADE": 0.05925402045249939,
+      "FDE": 0.06726013869047165
+    },
+    {
+      "split": "test",
+      "scene_id": 75,
+      "model": "original",
+      "ADE": 0.8937446475028992,
+      "FDE": 1.7541570663452148
+    },
+    {
+      "split": "test",
+      "scene_id": 75,
+      "model": "no_neighbours",
+      "ADE": 0.8381355404853821,
+      "FDE": 1.645179271697998
+    },
+    {
+      "split": "test",
+      "scene_id": 75,
+      "model": "tenth_grid",
+      "ADE": 0.825552225112915,
+      "FDE": 1.6064748764038086
+    },
+    {
+      "split": "test",
+      "scene_id": 75,
+      "model": "triple_grid",
+      "ADE": 0.9795935750007629,
+      "FDE": 1.84531831741333
+    },
+    {
+      "split": "test",
+      "scene_id": 75,
+      "model": "constant_velocity",
+      "ADE": 0.08454713225364685,
+      "FDE": 0.1522371917963028
+    },
+    {
+      "split": "test",
+      "scene_id": 76,
+      "model": "original",
+      "ADE": 0.8321227431297302,
+      "FDE": 1.6401690244674683
+    },
+    {
+      "split": "test",
+      "scene_id": 76,
+      "model": "no_neighbours",
+      "ADE": 0.7113346457481384,
+      "FDE": 1.3832582235336304
+    },
+    {
+      "split": "test",
+      "scene_id": 76,
+      "model": "tenth_grid",
+      "ADE": 0.6996509432792664,
+      "FDE": 1.3628630638122559
+    },
+    {
+      "split": "test",
+      "scene_id": 76,
+      "model": "triple_grid",
+      "ADE": 0.8818886280059814,
+      "FDE": 1.6911059617996216
+    },
+    {
+      "split": "test",
+      "scene_id": 76,
+      "model": "constant_velocity",
+      "ADE": 0.143809512257576,
+      "FDE": 0.2850205898284912
+    },
+    {
+      "split": "test",
+      "scene_id": 77,
+      "model": "original",
+      "ADE": 0.7016863226890564,
+      "FDE": 1.4001108407974243
+    },
+    {
+      "split": "test",
+      "scene_id": 77,
+      "model": "no_neighbours",
+      "ADE": 0.6274054646492004,
+      "FDE": 1.2184652090072632
+    },
+    {
+      "split": "test",
+      "scene_id": 77,
+      "model": "tenth_grid",
+      "ADE": 0.6190431714057922,
+      "FDE": 1.2072011232376099
+    },
+    {
+      "split": "test",
+      "scene_id": 77,
+      "model": "triple_grid",
+      "ADE": 0.8064344525337219,
+      "FDE": 1.5454223155975342
+    },
+    {
+      "split": "test",
+      "scene_id": 77,
+      "model": "constant_velocity",
+      "ADE": 0.10549714416265488,
+      "FDE": 0.17449051141738892
+    },
+    {
+      "split": "test",
+      "scene_id": 78,
+      "model": "original",
+      "ADE": 0.7556368708610535,
+      "FDE": 1.4520106315612793
+    },
+    {
+      "split": "test",
+      "scene_id": 78,
+      "model": "no_neighbours",
+      "ADE": 0.6956198215484619,
+      "FDE": 1.3336366415023804
+    },
+    {
+      "split": "test",
+      "scene_id": 78,
+      "model": "tenth_grid",
+      "ADE": 0.6900714039802551,
+      "FDE": 1.3272597789764404
+    },
+    {
+      "split": "test",
+      "scene_id": 78,
+      "model": "triple_grid",
+      "ADE": 0.9598199725151062,
+      "FDE": 1.8012031316757202
+    },
+    {
+      "split": "test",
+      "scene_id": 78,
+      "model": "constant_velocity",
+      "ADE": 0.14355075359344482,
+      "FDE": 0.2696110010147095
+    },
+    {
+      "split": "test",
+      "scene_id": 79,
+      "model": "original",
+      "ADE": 0.6457066535949707,
+      "FDE": 1.0970714092254639
+    },
+    {
+      "split": "test",
+      "scene_id": 79,
+      "model": "no_neighbours",
+      "ADE": 0.7334163188934326,
+      "FDE": 1.2874598503112793
+    },
+    {
+      "split": "test",
+      "scene_id": 79,
+      "model": "tenth_grid",
+      "ADE": 0.7277619242668152,
+      "FDE": 1.2812089920043945
+    },
+    {
+      "split": "test",
+      "scene_id": 79,
+      "model": "triple_grid",
+      "ADE": 0.8435530066490173,
+      "FDE": 1.404830813407898
+    },
+    {
+      "split": "test",
+      "scene_id": 79,
+      "model": "constant_velocity",
+      "ADE": 0.2247093915939331,
+      "FDE": 0.5238626599311829
+    }
+  ],
+  "parameter_counts": {
+    "original": 25777,
+    "no_neighbours": 25777,
+    "tenth_grid": 25777,
+    "triple_grid": 25777
+  },
+  "units": "scaled coordinate units; metres only under unverified cm assumption",
+  "protocol": "12 primary-pedestrian scenes per split; all 64 tracks recursively predicted from history only",
+  "uncertainty": "not estimated: one training seed and overlapping windows"
+}
