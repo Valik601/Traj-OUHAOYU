@@ -1,0 +1,6 @@
+{
+  "selected_wave_speed_m_s": -4.5,
+  "selected_wave_speed_km_h": -16.2,
+  "method": "lagged congested speed-field correlation",
+  "paper_note": "The wave speed is exogenous in He & Wu (2025); this workflow estimates a candidate and permits manual override."
+}

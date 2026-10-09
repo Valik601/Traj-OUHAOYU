@@ -1,0 +1,74 @@
+project:
+  random_seed: 20261009
+  lane_id: 3
+
+input:
+  has_header: true
+  source_units: si
+  field_map:
+    vehicle_id: vehicle_id
+    frame_id: frame_id
+    time_s: time_s
+    global_time_ms: global_time_ms
+    x_m: local_x_m
+    s_m: local_y_m
+    length_m: vehicle_length_m
+    vehicle_class: vehicle_class
+    speed_m_s: speed_m_s
+    accel_m_s2: acceleration_m_s2
+    lane_id: lane_id
+
+preprocessing:
+  max_time_gap_s: 0.15
+  min_speed_m_s: 0.0
+  max_speed_m_s: 50.0
+  max_abs_accel_m_s2: 10.0
+  max_backward_jump_m: 0.5
+  max_implied_speed_m_s: 60.0
+  smoothing:
+    enabled: false
+    window_length: 11
+    polyorder: 2
+
+aggregation:
+  spatial_lengths_m: [100.0, 150.0, 200.0]
+  temporal_lengths_s: [10.0, 20.0, 30.0]
+  reference_length_m: 150.0
+  reference_duration_s: 20.0
+  anchor_time_step_s: 20.0
+  anchor_space_step_m: 50.0
+  min_vehicles: 5
+  minimum_occupied_time_fraction: 0.80
+  wave_speed:
+    manual_m_s: null
+    candidate_min_m_s: -8.0
+    candidate_max_m_s: -1.0
+    candidate_step_m_s: 0.25
+    grid_time_s: 5.0
+    grid_space_m: 20.0
+    max_lag_steps: 6
+    congested_speed_threshold_m_s: 12.0
+  adaptive:
+    orientations: [rectangular, wave_aligned]
+    weights:
+      speed_cv: 0.35
+      temporal_change: 0.25
+      mean_acceleration: 0.20
+      spatial_heterogeneity: 0.20
+    speed_reference_m_s: 15.0
+    acceleration_reference_m_s2: 2.0
+    scale_penalty: 0.05
+    quasi_stationary_threshold: 0.35
+    acceleration_threshold_m_s2: 0.15
+
+evaluation:
+  train_fraction: 0.70
+  stability_time_blocks: 4
+  sampling_intervals_s: [0.1, 0.2, 0.5]
+
+report:
+  dpi: 300
+  page_width_in: 16.54
+  page_height_in: 11.69
+  title: Empirical Fundamental Diagrams from NGSIM I-80 Trajectories
+

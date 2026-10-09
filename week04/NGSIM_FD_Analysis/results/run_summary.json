@@ -1,0 +1,16 @@
+{
+  "lane_id": 3,
+  "cleaned_rows": 193437,
+  "trajectory_segments": 193001,
+  "common_anchors": 176,
+  "wave_speed_m_s": -4.5,
+  "max_q_kv_relative_error": 4.2686115293676303e-16,
+  "report_pdf": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week04\\NGSIM_FD_Analysis\\results\\figures\\NGSIM_I80_Fundamental_Diagram_Report.pdf",
+  "report_png": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week04\\NGSIM_FD_Analysis\\results\\figures\\NGSIM_I80_Fundamental_Diagram_Report.png",
+  "report_manifest": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week04\\NGSIM_FD_Analysis\\results\\figures\\NGSIM_I80_Fundamental_Diagram_Report.manifest.json",
+  "method_diagnostic_figures": [
+    "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week04\\NGSIM_FD_Analysis\\results\\figures\\Rectangular_Fundamental_Diagrams.png",
+    "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week04\\NGSIM_FD_Analysis\\results\\figures\\Parallelogram_Fundamental_Diagrams.png",
+    "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week04\\NGSIM_FD_Analysis\\results\\figures\\Adaptive_Fundamental_Diagrams.png"
+  ]
+}

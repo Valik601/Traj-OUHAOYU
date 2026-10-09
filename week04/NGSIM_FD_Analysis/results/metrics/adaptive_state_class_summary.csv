@@ -1,0 +1,5 @@
+state_class,orientation,samples
+acceleration,rectangular,1
+quasi_stationary,rectangular,81
+quasi_stationary,wave_aligned,92
+transient,rectangular,2

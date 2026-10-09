@@ -1,0 +1,80 @@
+{
+  "Rectangular": {
+    "train_fit": {
+      "fit_success": true,
+      "free_flow_speed_km_h": 50.60008585947273,
+      "jam_density_veh_km": 102.89977699556061,
+      "critical_density_veh_km": 51.44988849778031,
+      "capacity_veh_h": 1301.684387723991,
+      "sample_count": 119,
+      "cost": 2537084.1498412937
+    },
+    "full_fit": {
+      "fit_success": true,
+      "free_flow_speed_km_h": 47.5322569454747,
+      "jam_density_veh_km": 107.9256705758232,
+      "critical_density_veh_km": 53.9628352879116,
+      "capacity_veh_h": 1282.4876762056717,
+      "sample_count": 175,
+      "cost": 3674455.3761454187
+    },
+    "block_capacities_veh_h": [
+      1561.5848507502728,
+      1425.9610536519826,
+      1348.9312758501756,
+      1133.5773218328243
+    ]
+  },
+  "Parallelogram": {
+    "train_fit": {
+      "fit_success": true,
+      "free_flow_speed_km_h": 50.00600759624698,
+      "jam_density_veh_km": 103.28066109372094,
+      "critical_density_veh_km": 51.64033054686047,
+      "capacity_veh_h": 1291.1633807995047,
+      "sample_count": 120,
+      "cost": 2169131.9826288363
+    },
+    "full_fit": {
+      "fit_success": true,
+      "free_flow_speed_km_h": 47.76604886092132,
+      "jam_density_veh_km": 105.59130155326494,
+      "critical_density_veh_km": 52.79565077663247,
+      "capacity_veh_h": 1260.9198173203827,
+      "sample_count": 176,
+      "cost": 3240018.965606895
+    },
+    "block_capacities_veh_h": [
+      1625.50955143224,
+      2792.4267144672276,
+      1325.9233168028297,
+      1135.836735070408
+    ]
+  },
+  "Adaptive": {
+    "train_fit": {
+      "fit_success": true,
+      "free_flow_speed_km_h": 47.08848367773632,
+      "jam_density_veh_km": 113.85722746850553,
+      "critical_density_veh_km": 56.928613734252764,
+      "capacity_veh_h": 1340.3410493107585,
+      "sample_count": 120,
+      "cost": 1808333.2422754169
+    },
+    "full_fit": {
+      "fit_success": true,
+      "free_flow_speed_km_h": 46.60827750434015,
+      "jam_density_veh_km": 111.32707632803955,
+      "critical_density_veh_km": 55.663538164019776,
+      "capacity_veh_h": 1297.1908168110313,
+      "sample_count": 176,
+      "cost": 2768746.529024933
+    },
+    "block_capacities_veh_h": [
+      1592.0981306400697,
+      1958.8012157712594,
+      1322.8837502557124,
+      1153.5211896564847
+    ]
+  }
+}

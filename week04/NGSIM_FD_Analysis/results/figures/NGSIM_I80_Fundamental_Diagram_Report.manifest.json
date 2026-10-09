@@ -1,0 +1,24 @@
+{
+  "page": "A3 landscape",
+  "size_inches": [
+    16.54,
+    11.69
+  ],
+  "png_dpi": 300,
+  "background": "opaque white",
+  "palette": {
+    "Rectangular": "#0072B2",
+    "Parallelogram": "#D55E00",
+    "Adaptive": "#009E73"
+  },
+  "raw_points_shown": true,
+  "common_flow_density_limits": [
+    94.8129256751055,
+    1852.9005033
+  ],
+  "simplification_note": "Wave-aligned polygon follows the task-specified s0+w(t-t0) boundaries.",
+  "sources": [
+    "He, Z., & Wu, C. (2025). arXiv:2507.09648v2.",
+    "Kassis et al. (2026). Scientific Agent Skills. arXiv:2609.00065."
+  ]
+}

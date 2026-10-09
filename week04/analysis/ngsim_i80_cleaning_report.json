@@ -1,0 +1,217 @@
+{
+  "report_schema_version": "1.0",
+  "provenance": {
+    "input_basename": "NGSIM_I80_20050413_1600-1615_SI.csv",
+    "input_bytes": 99340985,
+    "input_sha256": "df86a98e490daba1bf6a2ff3a1ca2e346be1cf2bdaf66a037910b74f40695255",
+    "raw_source_overwritten": false
+  },
+  "audit": {
+    "status": "PASS",
+    "schema": {
+      "columns": [
+        "vehicle_id",
+        "frame_id",
+        "time_s",
+        "global_time_ms",
+        "local_x_m",
+        "local_y_m",
+        "vehicle_length_m",
+        "vehicle_class",
+        "speed_m_s",
+        "acceleration_m_s2",
+        "lane_id"
+      ],
+      "column_count": 11,
+      "observational_unit": "one vehicle observation at one 0.1-second frame",
+      "primary_key": [
+        "vehicle_id",
+        "frame_id"
+      ],
+      "fields": {
+        "vehicle_id": {
+          "meaning": "车辆匿名编号",
+          "unit": "标识符",
+          "type": "整数"
+        },
+        "frame_id": {
+          "meaning": "采样帧编号",
+          "unit": "帧",
+          "type": "整数"
+        },
+        "time_s": {
+          "meaning": "相对采样起点时间",
+          "unit": "s",
+          "type": "有限数值"
+        },
+        "global_time_ms": {
+          "meaning": "全局时间戳",
+          "unit": "ms",
+          "type": "整数"
+        },
+        "local_x_m": {
+          "meaning": "横向位置",
+          "unit": "m",
+          "type": "有限数值"
+        },
+        "local_y_m": {
+          "meaning": "纵向位置",
+          "unit": "m",
+          "type": "有限数值"
+        },
+        "vehicle_length_m": {
+          "meaning": "车辆长度",
+          "unit": "m",
+          "type": "有限数值"
+        },
+        "vehicle_class": {
+          "meaning": "车辆类别代码",
+          "unit": "类别代码",
+          "type": "整数"
+        },
+        "speed_m_s": {
+          "meaning": "速度",
+          "unit": "m/s",
+          "type": "有限数值"
+        },
+        "acceleration_m_s2": {
+          "meaning": "加速度",
+          "unit": "m/s²",
+          "type": "有限数值"
+        },
+        "lane_id": {
+          "meaning": "车道代码",
+          "unit": "类别代码",
+          "type": "整数"
+        }
+      }
+    },
+    "scope": {
+      "rows_scanned": 1226650,
+      "full_file_scanned": true,
+      "distinct_vehicles": 2052,
+      "lane_record_counts": {
+        "1": 101831,
+        "2": 233280,
+        "3": 193438,
+        "4": 236664,
+        "5": 209555,
+        "6": 222067,
+        "7": 29815
+      }
+    },
+    "missingness": {
+      "policy": "empty/whitespace plus explicit --missing-token values",
+      "missing_cells": 0,
+      "by_column": {
+        "vehicle_id": 0,
+        "frame_id": 0,
+        "time_s": 0,
+        "global_time_ms": 0,
+        "local_x_m": 0,
+        "local_y_m": 0,
+        "vehicle_length_m": 0,
+        "vehicle_class": 0,
+        "speed_m_s": 0,
+        "acceleration_m_s2": 0,
+        "lane_id": 0
+      },
+      "imputation_performed": false
+    },
+    "validity": {
+      "invalid_numeric_cells": 0,
+      "by_column": {
+        "vehicle_id": 0,
+        "frame_id": 0,
+        "time_s": 0,
+        "global_time_ms": 0,
+        "local_x_m": 0,
+        "local_y_m": 0,
+        "vehicle_length_m": 0,
+        "vehicle_class": 0,
+        "speed_m_s": 0,
+        "acceleration_m_s2": 0,
+        "lane_id": 0
+      },
+      "nonrectangular_rows": 0,
+      "ranges": {
+        "vehicle_id": {
+          "min": 1,
+          "max": 3366
+        },
+        "frame_id": {
+          "min": 651,
+          "max": 9650
+        },
+        "time_s": {
+          "min": 0.0,
+          "max": 899.9
+        },
+        "global_time_ms": {
+          "min": 1113433200000,
+          "max": 1113434099900
+        },
+        "local_x_m": {
+          "min": 0.035662,
+          "max": 28.54732
+        },
+        "local_y_m": {
+          "min": 0.0,
+          "max": 535.683414
+        },
+        "vehicle_length_m": {
+          "min": 1.645923,
+          "max": 23.225806
+        },
+        "vehicle_class": {
+          "min": 1,
+          "max": 3
+        },
+        "speed_m_s": {
+          "min": 0.0,
+          "max": 29.047498
+        },
+        "acceleration_m_s2": {
+          "min": -3.413767,
+          "max": 3.413767
+        },
+        "lane_id": {
+          "min": 1,
+          "max": 7
+        }
+      }
+    },
+    "duplicates": {
+      "method": "exact primary key plus 128-bit row digest",
+      "invalid_key_rows": 0,
+      "duplicate_key_extra_rows": 0,
+      "exact_duplicate_extra_rows": 0,
+      "conflicting_key_extra_rows": 0
+    },
+    "temporal_continuity": {
+      "trajectory_gap_events": 0,
+      "internal_missing_0_1s_ticks": 0,
+      "duplicate_vehicle_time_rows": 0,
+      "vehicle_time_nonmonotonic_rows": 0,
+      "global_time_nonmonotonic_rows": 0,
+      "off_100ms_grid_rows": 0,
+      "time_origin_ms": 1113433200000,
+      "time_origin_mismatch_rows": 0,
+      "frame_tick_offset": 651,
+      "frame_offset_mismatch_rows": 0
+    }
+  },
+  "cleaning": {
+    "decision": "未发现需要删除或插补的缺失/重复问题，因此不改写数据记录。",
+    "cleaned_output_written": false
+  },
+  "metadata_comparison": {
+    "row_count_matches": true,
+    "vehicle_count_matches": true,
+    "duplicate_key_count_matches": true,
+    "file_bytes_match": true,
+    "sha256_matches": true,
+    "global_time_min_matches": false,
+    "global_time_max_matches": true
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "load": {
+    "input_basename": "NGSIM_I80_20050413_1600-1615_SI.csv",
+    "input_bytes": 99340985,
+    "input_sha256": "df86a98e490daba1bf6a2ff3a1ca2e346be1cf2bdaf66a037910b74f40695255",
+    "rows_loaded": 1226650,
+    "columns_loaded": [
+      "vehicle_id",
+      "frame_id",
+      "time_s",
+      "global_time_ms",
+      "x_m",
+      "s_m",
+      "length_m",
+      "vehicle_class",
+      "speed_m_s",
+      "accel_m_s2",
+      "lane_id"
+    ],
+    "source_units": "si",
+    "common_longitudinal_origin": true,
+    "per_vehicle_origin_reset": false
+  },
+  "preprocessing": {
+    "input_rows": 1226650,
+    "target_lane": 3,
+    "exact_duplicate_rows_removed": 0,
+    "conflicting_duplicate_keys": 0,
+    "missing_by_column": {
+      "vehicle_id": 0,
+      "frame_id": 0,
+      "time_s": 0,
+      "global_time_ms": 0,
+      "s_m": 0,
+      "speed_m_s": 0,
+      "accel_m_s2": 0,
+      "lane_id": 0
+    },
+    "rows_removed_for_missing_required_values": 0,
+    "rows_flagged_negative_or_high_speed": 0,
+    "rows_flagged_extreme_acceleration": 0,
+    "rows_flagged_backward_position_jump": 0,
+    "rows_flagged_excessive_position_jump": 7,
+    "rows_flagged_nonpositive_time_step": 0,
+    "unique_anomalous_rows_removed": 7,
+    "target_lane_rows_before_short_segment_filter": 193438,
+    "single_point_segment_rows_removed": 1,
+    "smoothing_enabled": false,
+    "rows_corrected_by_smoothing": 0,
+    "output_rows": 193437,
+    "continuous_segments": 436,
+    "vehicles_retained": 421,
+    "time_range_s": [
+      0.0,
+      899.9
+    ],
+    "space_range_m": [
+      4.446126,
+      517.764491
+    ]
+  }
+}
