@@ -1,1 +1,0 @@
-source_row,anomaly_reason,vehicle_id,frame_id,time_s,global_time_ms,local_x_m,local_y_m,vehicle_length_m,vehicle_class,speed_m_s,acceleration_m_s2,lane_id
