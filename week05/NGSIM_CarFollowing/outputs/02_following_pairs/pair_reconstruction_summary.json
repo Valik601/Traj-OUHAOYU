@@ -1,0 +1,57 @@
+{
+  "method": {
+    "grouping": [
+      "frame_id",
+      "lane_id"
+    ],
+    "ordering": "local_y_m ascending",
+    "follower_definition": "lower local_y_m member of each adjacent pair",
+    "leader_definition": "immediately next higher local_y_m vehicle",
+    "gap_formula": "leader_y - follower_y - leader_length",
+    "vehicle_class_filter_timing": "No class filter was applied before adjacency reconstruction. frame_pairs.csv retains all valid classes; passenger-car filtering is performed during case selection."
+  },
+  "thresholds": {
+    "minimum_gap_m_exclusive": 0.0,
+    "maximum_gap_m_inclusive": 150.0
+  },
+  "statistics": {
+    "input_rows": 1226650,
+    "ambiguous_frame_lane_groups_excluded": 0,
+    "rows_in_ambiguous_groups_excluded": 0,
+    "adjacent_pairs_before_gap_checks": 1164590,
+    "nonfinite_pairs_excluded": 0,
+    "nonpositive_or_below_minimum_gap_pairs_excluded": 3243,
+    "above_maximum_gap_pairs_excluded": 863,
+    "valid_pairs": 1160484,
+    "passenger_vehicle_class": 2,
+    "both_passenger_pairs_after_adjacency": 1056829,
+    "non_passenger_or_mixed_pairs_retained_for_audit": 103655
+  },
+  "output": {
+    "filename": "frame_pairs.csv",
+    "rows": 1160484,
+    "columns": [
+      "frame_id",
+      "time_s",
+      "global_time_ms",
+      "lane_id",
+      "leader_id",
+      "follower_id",
+      "leader_y",
+      "follower_y",
+      "leader_local_x_m",
+      "follower_local_x_m",
+      "leader_length",
+      "follower_length",
+      "gap_m",
+      "leader_speed_m_s",
+      "follower_speed_m_s",
+      "relative_speed_m_s",
+      "leader_acceleration_m_s2",
+      "follower_acceleration_m_s2",
+      "relative_acceleration_m_s2",
+      "leader_class",
+      "follower_class"
+    ]
+  }
+}

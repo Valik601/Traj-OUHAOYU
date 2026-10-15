@@ -1,0 +1,233 @@
+{
+  "input": {
+    "filename": "NGSIM_I80_20050413_1600-1615_SI.csv",
+    "bytes": 99340985,
+    "sha256": "df86a98e490daba1bf6a2ff3a1ca2e346be1cf2bdaf66a037910b74f40695255",
+    "raw_file_modified": false,
+    "si_values_converted_again": false
+  },
+  "schema": {
+    "columns": [
+      "vehicle_id",
+      "frame_id",
+      "time_s",
+      "global_time_ms",
+      "local_x_m",
+      "local_y_m",
+      "vehicle_length_m",
+      "vehicle_class",
+      "speed_m_s",
+      "acceleration_m_s2",
+      "lane_id"
+    ],
+    "expected_columns": [
+      "vehicle_id",
+      "frame_id",
+      "time_s",
+      "global_time_ms",
+      "local_x_m",
+      "local_y_m",
+      "vehicle_length_m",
+      "vehicle_class",
+      "speed_m_s",
+      "acceleration_m_s2",
+      "lane_id"
+    ],
+    "column_order_matches": true,
+    "dtypes": {
+      "vehicle_id": "int32",
+      "frame_id": "int32",
+      "time_s": "float64",
+      "global_time_ms": "int64",
+      "local_x_m": "float64",
+      "local_y_m": "float64",
+      "vehicle_length_m": "float64",
+      "vehicle_class": "int8",
+      "speed_m_s": "float64",
+      "acceleration_m_s2": "float64",
+      "lane_id": "int8"
+    },
+    "all_columns_numeric": true,
+    "units": {
+      "time_s": "s",
+      "global_time_ms": "ms since Unix epoch",
+      "local_x_m": "m",
+      "local_y_m": "m (vehicle front-center longitudinal position)",
+      "vehicle_length_m": "m",
+      "speed_m_s": "m/s",
+      "acceleration_m_s2": "m/s^2"
+    },
+    "unit_provenance": "US survey foot = 1200/3937 m; time_s relative to interval start; numeric SI fields rounded to 6 decimal places"
+  },
+  "counts": {
+    "records": 1226650,
+    "vehicles": 2052,
+    "frames": 9000,
+    "lanes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "lane_distribution": {
+      "1": 101831,
+      "2": 233280,
+      "3": 193438,
+      "4": 236664,
+      "5": 209555,
+      "6": 222067,
+      "7": 29815
+    },
+    "vehicle_class_distribution": {
+      "1": 3685,
+      "2": 1166252,
+      "3": 56713
+    },
+    "missing_by_column": {
+      "vehicle_id": 0,
+      "frame_id": 0,
+      "time_s": 0,
+      "global_time_ms": 0,
+      "local_x_m": 0,
+      "local_y_m": 0,
+      "vehicle_length_m": 0,
+      "vehicle_class": 0,
+      "speed_m_s": 0,
+      "acceleration_m_s2": 0,
+      "lane_id": 0
+    },
+    "duplicate_vehicle_frame_keys": 0
+  },
+  "ranges": {
+    "frame_id": [
+      651,
+      9650
+    ],
+    "time_s": [
+      0.0,
+      899.9
+    ],
+    "global_time_ms": [
+      1113433200000,
+      1113434099900
+    ],
+    "local_x_m": [
+      0.035662,
+      28.54732
+    ],
+    "local_y_m": [
+      0.0,
+      535.683414
+    ],
+    "vehicle_length_m": [
+      1.645923,
+      23.225806
+    ],
+    "speed_m_s": [
+      0.0,
+      29.047498
+    ],
+    "acceleration_m_s2": [
+      -3.413767,
+      3.413767
+    ]
+  },
+  "distributions": {
+    "speed_m_s_quantiles": {
+      "q00": 0.0,
+      "q01": 0.0,
+      "q05": 1.725171,
+      "q25": 5.355347,
+      "q50": 7.556007,
+      "q75": 9.415291,
+      "q95": 16.102616,
+      "q99": 21.336043,
+      "q100": 29.047498
+    },
+    "acceleration_m_s2_quantiles": {
+      "q00": -3.413767,
+      "q01": -3.413767,
+      "q05": -3.413767,
+      "q25": -0.353569,
+      "q50": 0.0,
+      "q75": 0.377953,
+      "q95": 3.413767,
+      "q99": 3.413767,
+      "q100": 3.413767
+    }
+  },
+  "time_and_frame_consistency": {
+    "configured_sampling_interval_s": 0.1,
+    "time_grid_tolerance_s": 1e-06,
+    "off_grid_rows": 0,
+    "inferred_global_time_at_time_zero_ms": 1113433200000,
+    "global_time_alignment_mismatch_rows": 0,
+    "inferred_frame_offset_at_time_zero": 651,
+    "frame_time_alignment_mismatch_rows": 0,
+    "frames_mapping_to_multiple_time_s_values": 0,
+    "frames_mapping_to_multiple_global_time_values": 0
+  },
+  "vehicle_track_continuity": {
+    "vehicles_with_frame_gaps": 0,
+    "frame_gap_events": 0,
+    "missing_frames_inside_tracks": 0,
+    "vehicle_time_step_mismatch_rows": 0,
+    "records_per_vehicle": {
+      "minimum": 102,
+      "median": 622.0,
+      "maximum": 1168
+    }
+  },
+  "anomalies": {
+    "unique_records_flagged": 0,
+    "reason_counts": {
+      "missing_value": 0,
+      "nonfinite_numeric_value": 0,
+      "duplicate_vehicle_frame_key": 0,
+      "negative_position": 0,
+      "negative_speed": 0,
+      "speed_above_configured_limit": 0,
+      "nonpositive_vehicle_length": 0,
+      "absolute_acceleration_above_configured_limit": 0,
+      "time_off_0.1s_grid": 0,
+      "global_time_not_aligned_with_time_s": 0,
+      "frame_id_not_aligned_with_time_s": 0,
+      "vehicle_frame_gap_starts_here": 0,
+      "vehicle_time_step_mismatch": 0,
+      "global_time_below_1e12": 0
+    },
+    "configured_limits": {
+      "maximum_plausible_speed_m_s": 60.0,
+      "maximum_plausible_abs_acceleration_m_s2": 15.0
+    }
+  },
+  "source_and_checks_comparison": {
+    "declared_records": 1226650,
+    "actual_records": 1226650,
+    "record_count_matches": true,
+    "declared_vehicles": 2052,
+    "actual_vehicles": 2052,
+    "vehicle_count_matches": true,
+    "declared_bytes": 99340985,
+    "actual_bytes": 99340985,
+    "byte_count_matches": true,
+    "declared_sha256": "df86a98e490daba1bf6a2ff3a1ca2e346be1cf2bdaf66a037910b74f40695255",
+    "actual_sha256": "df86a98e490daba1bf6a2ff3a1ca2e346be1cf2bdaf66a037910b74f40695255",
+    "sha256_matches": true,
+    "declared_global_time_ms_range": [
+      1000000000,
+      1113434099900
+    ],
+    "actual_global_time_ms_range": [
+      1113433200000,
+      1113434099900
+    ],
+    "global_time_range_matches": false,
+    "metadata_lower_bound_is_known_placeholder": true,
+    "actual_rows_with_global_time_ms_equal_1000000000": 0,
+    "conclusion": "source_and_checks.json declares global_time_ms lower bound 1000000000, but the actual CSV minimum is 1113433200000; the CSV contains no row with the anomalous placeholder timestamp. Other declared size/count/hash checks are reported independently above."
+  }
+}

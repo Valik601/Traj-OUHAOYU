@@ -1,0 +1,11 @@
+{
+  "status": "selected",
+  "selection_mode": "manual_validated",
+  "pair_observations_read": 1160484,
+  "row_eligible_observations": 835527,
+  "continuous_segments": 3163,
+  "windows_evaluated": 17759,
+  "eligible_windows": 14712,
+  "candidate_rows_written": 100,
+  "thresholds_were_relaxed": false
+}

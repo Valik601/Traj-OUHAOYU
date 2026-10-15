@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "metadata": {
+    "generated_at_utc": "2026-10-15T03:58:16.991909+00:00",
+    "config_path": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week05\\NGSIM_CarFollowing\\config.yaml",
+    "config_sha256": "ac52ba598f45285c453efa5d76ab61a950e4715f48540eec8187725584d9acda",
+    "source_trajectory": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week05\\NGSIM_CarFollowing\\outputs\\04_prepared\\trajectory_clean.csv",
+    "source_trajectory_sha256": "515efef5e2387c1fa800d877fd7552c808cd900e63a9d16652f9194085809dda",
+    "initial_conditions": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week05\\NGSIM_CarFollowing\\outputs\\04_prepared\\initial_conditions.json",
+    "initial_conditions_sha256": "77310f11a6b607d5bb9cc76ef3631c3d456b19df0a520f0e9602151e9b4db422",
+    "leader_input": "measured leader_x and leader_v from trajectory_clean.csv",
+    "follower_truth_usage": "initial follower_x_true and follower_v_true only",
+    "integration_method": {
+      "speed": "forward Euler with max(0, v + a*dt)",
+      "position": "trapezoidal using old and updated speed"
+    },
+    "time_step_s": 0.1,
+    "collision_gap_m": 0.0,
+    "maximum_abs_acceleration_m_s2": 20.0,
+    "stop_on_unreasonable_acceleration": true,
+    "requested_samples": 401,
+    "requested_start_time_s": 0.0,
+    "requested_end_time_s": 40.0,
+    "common_initial_state": {
+      "follower_x_m": 68.956489,
+      "follower_v_m_s": 14.216744,
+      "leader_x_m": 85.853365,
+      "leader_v_m_s": 14.314953,
+      "leader_length_m": 4.663449,
+      "net_gap_m": 12.233427
+    },
+    "units": {
+      "t": "s",
+      "x_sim": "m",
+      "v_sim": "m/s",
+      "a_sim": "m/s^2",
+      "gap_sim": "m"
+    }
+  },
+  "models": {
+    "OVM": {
+      "status": "completed",
+      "completed": true,
+      "failure_reason": null,
+      "failure_index": null,
+      "failure_time_s": null,
+      "pre_failure_state": null,
+      "failure_state": null,
+      "model": "OVM",
+      "parameters": {
+        "kappa": 0.5,
+        "v_max": 33.33,
+        "s_c": 25.0,
+        "ell": 8.0
+      },
+      "total_requested_samples": 401,
+      "written_samples": 401,
+      "valid_samples": 401,
+      "last_valid_state": {
+        "index": 400,
+        "t_s": 40.0,
+        "x_m": 473.0980648184273,
+        "v_m_s": 9.66678752129047,
+        "a_m_s2": 1.1697425551293206,
+        "gap_m": 22.723814181572678
+      },
+      "minimum_recorded_gap_m": 12.233426999999992,
+      "warning_events": [],
+      "initial_state": {
+        "index": 0,
+        "t_s": 0.0,
+        "x_m": 68.956489,
+        "v_m_s": 14.216744,
+        "a_m_s2": -6.481315063128765,
+        "gap_m": 12.233426999999992
+      },
+      "output_csv": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week05\\NGSIM_CarFollowing\\outputs\\05_simulation\\simulation_OVM.csv"
+    },
+    "FVDM": {
+      "status": "completed",
+      "completed": true,
+      "failure_reason": null,
+      "failure_index": null,
+      "failure_time_s": null,
+      "pre_failure_state": null,
+      "failure_state": null,
+      "model": "FVDM",
+      "parameters": {
+        "kappa": 0.5,
+        "lambda": 0.5,
+        "v_max": 33.33,
+        "s_c": 25.0,
+        "ell": 8.0
+      },
+      "total_requested_samples": 401,
+      "written_samples": 401,
+      "valid_samples": 401,
+      "last_valid_state": {
+        "index": 400,
+        "t_s": 40.0,
+        "x_m": 473.5769598614575,
+        "v_m_s": 9.219934750244933,
+        "a_m_s2": 1.0468623869823386,
+        "gap_m": 22.24491913854247
+      },
+      "minimum_recorded_gap_m": 12.233426999999992,
+      "warning_events": [],
+      "initial_state": {
+        "index": 0,
+        "t_s": 0.0,
+        "x_m": 68.956489,
+        "v_m_s": 14.216744,
+        "a_m_s2": -6.432210563128765,
+        "gap_m": 12.233426999999992
+      },
+      "output_csv": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week05\\NGSIM_CarFollowing\\outputs\\05_simulation\\simulation_FVDM.csv"
+    },
+    "IDM": {
+      "status": "completed",
+      "completed": true,
+      "failure_reason": null,
+      "failure_index": null,
+      "failure_time_s": null,
+      "pre_failure_state": null,
+      "failure_state": null,
+      "model": "IDM",
+      "parameters": {
+        "v0": 33.33,
+        "T": 1.5,
+        "s0": 2.0,
+        "a": 1.2,
+        "b": 2.0,
+        "delta": 4.0,
+        "minimum_gap_epsilon_m": 0.001,
+        "maximum_braking_m_s2": 50.0
+      },
+      "total_requested_samples": 401,
+      "written_samples": 401,
+      "valid_samples": 401,
+      "last_valid_state": {
+        "index": 400,
+        "t_s": 40.0,
+        "x_m": 479.2429073926795,
+        "v_m_s": 7.595860774752009,
+        "a_m_s2": 0.8519142625383394,
+        "gap_m": 16.57897160732047
+      },
+      "minimum_recorded_gap_m": 7.810887388452514,
+      "warning_events": [],
+      "initial_state": {
+        "index": 0,
+        "t_s": 0.0,
+        "x_m": 68.956489,
+        "v_m_s": 14.216744,
+        "a_m_s2": -3.0352625507518733,
+        "gap_m": 12.233426999999992
+      },
+      "output_csv": "F:\\OHYCode\\Project\\DATAPROCESSING\\OpenTraj\\Traj-OUHAOYU\\week05\\NGSIM_CarFollowing\\outputs\\05_simulation\\simulation_IDM.csv"
+    }
+  }
+}

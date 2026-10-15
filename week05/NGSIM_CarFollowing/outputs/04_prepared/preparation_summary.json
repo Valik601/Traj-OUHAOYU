@@ -1,0 +1,61 @@
+{
+  "status": "prepared",
+  "leader_id": 1251,
+  "follower_id": 1259,
+  "lane_id": 5,
+  "start_frame": 3706,
+  "end_frame": 4106,
+  "duration_s": 40.0,
+  "frame_count": 401,
+  "processing": {
+    "smoothing_enabled": true,
+    "method": "Savitzky-Golay position smoothing",
+    "savgol_window_length": 21,
+    "savgol_polyorder": 2,
+    "use_smoothed_kinematics": true,
+    "kinematics_method": "first and second Savitzky-Golay derivatives of smoothed longitudinal position",
+    "sampling_interval_s": 0.1,
+    "raw_values_preserved_in": "trajectory_raw.csv",
+    "no_clipping_or_imputation": true,
+    "smoothing_context": {
+      "source": "individual raw SI trajectories",
+      "padding_frames_requested_each_side": 10,
+      "context_start_frame": 3696,
+      "context_end_frame": 4106,
+      "selected_start_frame": 3706,
+      "selected_end_frame": 4106
+    }
+  },
+  "raw_gap_range_m": [
+    9.974904999999993,
+    24.386487000000002
+  ],
+  "prepared_gap_range_m": [
+    9.974457651192964,
+    24.399339945406567
+  ],
+  "prepared_physical_checks": {
+    "minimum_speed_m_s": 3.3699269090909,
+    "maximum_speed_m_s": 15.740576441558431,
+    "maximum_abs_acceleration_m_s2": 3.689625026030484,
+    "configured_maximum_speed_m_s": 60.0,
+    "configured_maximum_abs_acceleration_m_s2": 15.0,
+    "passed": true
+  },
+  "alignment_checks": {
+    "one_row_per_frame": true,
+    "continuous_0.1s_grid": true,
+    "common_leader_follower_time_index": true,
+    "prepared_initial_state_matches_trajectory_clean_first_row": true,
+    "initial_state_consistency": {
+      "leader_position_matches_trajectory_clean": true,
+      "leader_speed_matches_trajectory_clean": true,
+      "leader_acceleration_matches_trajectory_clean": true,
+      "follower_position_matches_trajectory_clean": true,
+      "follower_speed_matches_trajectory_clean": true,
+      "follower_acceleration_matches_trajectory_clean": true,
+      "initial_gap_equals_positions_and_leader_length": true,
+      "initial_relative_speed_equals_position_derived_speeds": true
+    }
+  }
+}

@@ -1,0 +1,166 @@
+project:
+  name: NGSIM I-80 Car-Following Model Comparison
+  random_seed: 20261015
+
+paths:
+  # Relative paths are resolved from this config file's directory.
+  si_csv: ../datasets/NGSIM-I80/NGSIM_I80_20050413_1600-1615_SI.csv
+  source_checks: ../datasets/NGSIM-I80/source_and_checks.json
+  output_root: outputs
+  quality_dir: outputs/01_data_quality
+  pairs_dir: outputs/02_following_pairs
+  cases_dir: outputs/03_cases
+  prepared_dir: outputs/04_prepared
+  simulation_dir: outputs/05_simulation
+  evaluation_dir: outputs/06_evaluation
+
+data:
+  expected_columns:
+    - vehicle_id
+    - frame_id
+    - time_s
+    - global_time_ms
+    - local_x_m
+    - local_y_m
+    - vehicle_length_m
+    - vehicle_class
+    - speed_m_s
+    - acceleration_m_s2
+    - lane_id
+  sampling_interval_s: 0.1
+  time_grid_tolerance_s: 0.000001
+  maximum_plausible_speed_m_s: 60.0
+  maximum_plausible_abs_acceleration_m_s2: 15.0
+
+pairing:
+  minimum_gap_m: 0.0
+  maximum_gap_m: 150.0
+
+selection:
+  # This case was chosen from the automatically ranked candidates after visual
+  # and position/speed-consistency review. Set to null to use rank 1 directly.
+  manual_case:
+    leader_id: 1251
+    follower_id: 1259
+    start_frame: 3706
+    end_frame: 4106
+  passenger_vehicle_class: 2
+  preferred_lanes: [1, 2, 3, 4, 5]
+  minimum_duration_s: 20.0
+  maximum_duration_s: 40.0
+  minimum_gap_m: 0.5
+  maximum_gap_m: 100.0
+  minimum_leader_speed_range_m_s: 3.0
+  minimum_leader_deceleration_m_s2: -0.5
+  maximum_missing_fraction: 0.0
+  candidate_limit: 100
+  window_step_s: 1.0
+  score_weights:
+    duration: 0.15
+    speed_range: 0.30
+    deceleration: 0.25
+    follower_response: 0.15
+    gap_quality: 0.15
+
+preparation:
+  smoothing_enabled: true
+  # 2.1 s quadratic Savitzky-Golay smoothing suppresses isolated NGSIM speed
+  # spikes while preserving the selected event's braking/re-acceleration shape.
+  savgol_window_length: 21
+  savgol_polyorder: 2
+  use_smoothed_kinematics: true
+
+models:
+  OVM:
+    kappa: 0.5
+    v_max: 33.33
+    s_c: 25.0
+    ell: 8.0
+  FVDM:
+    kappa: 0.5
+    lambda: 0.5
+    v_max: 33.33
+    s_c: 25.0
+    ell: 8.0
+  IDM:
+    v0: 33.33
+    T: 1.5
+    s0: 2.0
+    a: 1.2
+    b: 2.0
+    delta: 4.0
+
+simulation:
+  time_step_s: 0.1
+  collision_gap_m: 0.0
+  maximum_abs_acceleration_m_s2: 20.0
+  stop_on_unreasonable_acceleration: true
+
+evaluation:
+  braking_acceleration_threshold_m_s2: -0.5
+  braking_consecutive_frames: 3
+  response_search_window_s: 8.0
+  png_dpi: 300
+  figure_width_in: 12.0
+  figure_height_in: 8.0
+
+# Optional stage 07. It is driven entirely by this section and is NOT part of the
+# default run_pipeline.py steps; run it with `python src/07_calibrate.py` or
+# `python run_pipeline.py --start-step 7 --end-step 7`.
+#
+# WARNING: the default input is the same prepared case used for reporting, so
+# these results are an IN-SAMPLE demonstration and must never be presented as
+# held-out or generalisation performance.
+calibration:
+  optimizer: differential_evolution
+  output_dir: outputs/07_calibration
+  random_seed: 20261015
+  objective:
+    # Normalised position and speed misfit, plus explicit failure penalties.
+    weights:
+      position: 0.5
+      speed: 0.5
+    normalization:
+      # `auto` (or omitting the key) normalises by the observed truth range;
+      # give a positive number to fix a scale explicitly.
+      position_scale_m: auto
+      speed_scale_m_s: auto
+      minimum_position_scale_m: 1.0
+      minimum_speed_scale_m_s: 1.0
+    penalties:
+      failure: 5.0
+      collision: 5.0
+      missing: 1.0
+      invalid_candidate: 50.0
+  differential_evolution:
+    maxiter: 40
+    popsize: 15
+    tol: 0.000001
+    atol: 0.00000001
+    mutation: [0.5, 1.0]
+    recombination: 0.7
+    polish: true
+    updating: deferred
+    workers: 1
+  # Physically interpretable search ranges. Every bound is additionally checked
+  # against the equation-level limits in 04_car_following_models.py.
+  parameter_bounds:
+    OVM:
+      kappa: [0.05, 3.0]
+      v_max: [5.0, 50.0]
+      s_c: [0.0, 100.0]
+      ell: [0.5, 50.0]
+    FVDM:
+      kappa: [0.05, 3.0]
+      lambda: [0.0, 3.0]
+      v_max: [5.0, 50.0]
+      s_c: [0.0, 100.0]
+      ell: [0.5, 50.0]
+    IDM:
+      v0: [5.0, 50.0]
+      T: [0.2, 3.0]
+      s0: [0.5, 10.0]
+      a: [0.2, 3.0]
+      b: [0.5, 5.0]
+      delta: [1.0, 10.0]
+
