@@ -7,6 +7,8 @@
 - **实验 1（固定个人空间）**：报告 [report/实验报告.md](report/实验报告.md)；入口 `run_experiments.py`，产物 `outputs/`。
 - **实验 2（速度相关的个人空间 / 间隙接受）**：行人愿意在慢车旁贴近穿行、不接受时速度可降到 0；报告 [report/实验2_速度相关接受模型.md](report/实验2_速度相关接受模型.md)；入口 `run_acceptance_experiment.py`，产物 `outputs_acceptance/`。
 
+> 全部结果的一页总览：[../results_all.png](../results_all.png)；汇总文档：[../RESULTS.md](../RESULTS.md)。
+
 ## 环境与安装
 
 本机验证环境：Python 3.12.14、numpy 2.3.5、pandas 3.0.1、matplotlib 3.11.2、PyYAML 6.0.3、pytest 9.1.1。
