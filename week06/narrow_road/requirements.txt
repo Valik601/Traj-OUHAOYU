@@ -1,0 +1,6 @@
+# 本机验证过的版本（Python 3.12.14, Windows）
+numpy==2.3.5
+pandas==3.0.1
+matplotlib==3.11.2
+PyYAML==6.0.3
+pytest==9.1.1

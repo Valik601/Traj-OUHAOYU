@@ -1,0 +1,135 @@
+{
+  "all_agree": true,
+  "n_checked": 16,
+  "rows": [
+    {
+      "width_m": 4.0,
+      "rule": "R0",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 4.0,
+      "rule": "R0",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 4.0,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 4.0,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 3.5,
+      "rule": "R0",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 3.5,
+      "rule": "R0",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 3.5,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 3.5,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 3.0,
+      "rule": "R0",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "width_m": 3.0,
+      "rule": "R0",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "width_m": 3.0,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 3.0,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "width_m": 2.8,
+      "rule": "R0",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "width_m": 2.8,
+      "rule": "R0",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "width_m": 2.8,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "width_m": 2.8,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    }
+  ],
+  "note": "解析判据 c_avail = L/2 - Wc/2 - Wp，只比较“几何 + 规则阈值”所决定的可通行性，不含动力学延误。"
+}
