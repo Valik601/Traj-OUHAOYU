@@ -1,0 +1,871 @@
+{
+  "n_checked": 96,
+  "n_agree": 96,
+  "all_agree": true,
+  "rows": [
+    {
+      "run_id": "L2.80_R1_sfm",
+      "width_m": 2.8,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.80_R1_wiedemann",
+      "width_m": 2.8,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.80_S_cons_sfm",
+      "width_m": 2.8,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.80_S_cons_wiedemann",
+      "width_m": 2.8,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.80_S_mod_sfm",
+      "width_m": 2.8,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.80_S_mod_wiedemann",
+      "width_m": 2.8,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.80_S_lib_sfm",
+      "width_m": 2.8,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.80_S_lib_wiedemann",
+      "width_m": 2.8,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.82_R1_sfm",
+      "width_m": 2.82,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.82_R1_wiedemann",
+      "width_m": 2.82,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.82_S_cons_sfm",
+      "width_m": 2.82,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.82_S_cons_wiedemann",
+      "width_m": 2.82,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.82_S_mod_sfm",
+      "width_m": 2.82,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.82_S_mod_wiedemann",
+      "width_m": 2.82,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.82_S_lib_sfm",
+      "width_m": 2.82,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.82_S_lib_wiedemann",
+      "width_m": 2.82,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.84_R1_sfm",
+      "width_m": 2.84,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.84_R1_wiedemann",
+      "width_m": 2.84,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.84_S_cons_sfm",
+      "width_m": 2.84,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.84_S_cons_wiedemann",
+      "width_m": 2.84,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.84_S_mod_sfm",
+      "width_m": 2.84,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.84_S_mod_wiedemann",
+      "width_m": 2.84,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.84_S_lib_sfm",
+      "width_m": 2.84,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.84_S_lib_wiedemann",
+      "width_m": 2.84,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.86_R1_sfm",
+      "width_m": 2.86,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.86_R1_wiedemann",
+      "width_m": 2.86,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.86_S_cons_sfm",
+      "width_m": 2.86,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.86_S_cons_wiedemann",
+      "width_m": 2.86,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.86_S_mod_sfm",
+      "width_m": 2.86,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.86_S_mod_wiedemann",
+      "width_m": 2.86,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.86_S_lib_sfm",
+      "width_m": 2.86,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.86_S_lib_wiedemann",
+      "width_m": 2.86,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.88_R1_sfm",
+      "width_m": 2.88,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.88_R1_wiedemann",
+      "width_m": 2.88,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.88_S_cons_sfm",
+      "width_m": 2.88,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.88_S_cons_wiedemann",
+      "width_m": 2.88,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.88_S_mod_sfm",
+      "width_m": 2.88,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.88_S_mod_wiedemann",
+      "width_m": 2.88,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.88_S_lib_sfm",
+      "width_m": 2.88,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.88_S_lib_wiedemann",
+      "width_m": 2.88,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.90_R1_sfm",
+      "width_m": 2.9,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.90_R1_wiedemann",
+      "width_m": 2.9,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": false,
+      "observed_pass": false,
+      "agree": true
+    },
+    {
+      "run_id": "L2.90_S_cons_sfm",
+      "width_m": 2.9,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.90_S_cons_wiedemann",
+      "width_m": 2.9,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.90_S_mod_sfm",
+      "width_m": 2.9,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.90_S_mod_wiedemann",
+      "width_m": 2.9,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.90_S_lib_sfm",
+      "width_m": 2.9,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.90_S_lib_wiedemann",
+      "width_m": 2.9,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.95_R1_sfm",
+      "width_m": 2.95,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.95_R1_wiedemann",
+      "width_m": 2.95,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.95_S_cons_sfm",
+      "width_m": 2.95,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.95_S_cons_wiedemann",
+      "width_m": 2.95,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.95_S_mod_sfm",
+      "width_m": 2.95,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.95_S_mod_wiedemann",
+      "width_m": 2.95,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.95_S_lib_sfm",
+      "width_m": 2.95,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L2.95_S_lib_wiedemann",
+      "width_m": 2.95,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.00_R1_sfm",
+      "width_m": 3.0,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.00_R1_wiedemann",
+      "width_m": 3.0,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.00_S_cons_sfm",
+      "width_m": 3.0,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.00_S_cons_wiedemann",
+      "width_m": 3.0,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.00_S_mod_sfm",
+      "width_m": 3.0,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.00_S_mod_wiedemann",
+      "width_m": 3.0,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.00_S_lib_sfm",
+      "width_m": 3.0,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.00_S_lib_wiedemann",
+      "width_m": 3.0,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.10_R1_sfm",
+      "width_m": 3.1,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.10_R1_wiedemann",
+      "width_m": 3.1,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.10_S_cons_sfm",
+      "width_m": 3.1,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.10_S_cons_wiedemann",
+      "width_m": 3.1,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.10_S_mod_sfm",
+      "width_m": 3.1,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.10_S_mod_wiedemann",
+      "width_m": 3.1,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.10_S_lib_sfm",
+      "width_m": 3.1,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.10_S_lib_wiedemann",
+      "width_m": 3.1,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.20_R1_sfm",
+      "width_m": 3.2,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.20_R1_wiedemann",
+      "width_m": 3.2,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.20_S_cons_sfm",
+      "width_m": 3.2,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.20_S_cons_wiedemann",
+      "width_m": 3.2,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.20_S_mod_sfm",
+      "width_m": 3.2,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.20_S_mod_wiedemann",
+      "width_m": 3.2,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.20_S_lib_sfm",
+      "width_m": 3.2,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.20_S_lib_wiedemann",
+      "width_m": 3.2,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.50_R1_sfm",
+      "width_m": 3.5,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.50_R1_wiedemann",
+      "width_m": 3.5,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.50_S_cons_sfm",
+      "width_m": 3.5,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.50_S_cons_wiedemann",
+      "width_m": 3.5,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.50_S_mod_sfm",
+      "width_m": 3.5,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.50_S_mod_wiedemann",
+      "width_m": 3.5,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.50_S_lib_sfm",
+      "width_m": 3.5,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L3.50_S_lib_wiedemann",
+      "width_m": 3.5,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L4.00_R1_sfm",
+      "width_m": 4.0,
+      "rule": "R1",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L4.00_R1_wiedemann",
+      "width_m": 4.0,
+      "rule": "R1",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L4.00_S_cons_sfm",
+      "width_m": 4.0,
+      "rule": "S_cons",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L4.00_S_cons_wiedemann",
+      "width_m": 4.0,
+      "rule": "S_cons",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L4.00_S_mod_sfm",
+      "width_m": 4.0,
+      "rule": "S_mod",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L4.00_S_mod_wiedemann",
+      "width_m": 4.0,
+      "rule": "S_mod",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L4.00_S_lib_sfm",
+      "width_m": 4.0,
+      "rule": "S_lib",
+      "model": "sfm",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    },
+    {
+      "run_id": "L4.00_S_lib_wiedemann",
+      "width_m": 4.0,
+      "rule": "S_lib",
+      "model": "wiedemann",
+      "predicted_pass": true,
+      "observed_pass": true,
+      "agree": true
+    }
+  ]
+}

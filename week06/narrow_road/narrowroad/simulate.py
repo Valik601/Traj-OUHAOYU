@@ -32,6 +32,7 @@ class RunSpec:
     model: str
     initial_conditions: list[dict[str, Any]]
     save_trace: bool = True
+    t_max_s: float | None = None      # 覆盖 config 的仿真时长（实验 2 的慢速爬行需要）
 
 
 @dataclass
@@ -282,7 +283,7 @@ def simulate(
     spec: RunSpec, cfg: dict[str, Any]
 ) -> tuple[RunResult, pd.DataFrame | None, list[dict[str, Any]]]:
     dt = float(cfg["meta"]["dt_s"])
-    t_max = float(cfg["meta"]["t_max_s"])
+    t_max = float(spec.t_max_s) if spec.t_max_s is not None else float(cfg["meta"]["t_max_s"])
     record_every = float(cfg["meta"]["record_every_s"])
     rule = cfg["rules"][spec.rule]
     metrics_cfg = cfg["metrics"]
@@ -294,6 +295,7 @@ def simulate(
     dl_window = float(metrics_cfg["deadlock_window_m"])
 
     world = build_world(spec, cfg)
+    world.rule = rule
     car = world.car
     car_free_flow_t = (
         float(cfg["car"]["start_x_m"]) - float(cfg["car"]["finish_x_m"])
@@ -335,10 +337,14 @@ def simulate(
         world.t = t
 
         # ---- 1. 决策 -----------------------------------------------------
+        # 先算车辆决策：实验 2 的行人接受判定需要车辆的“计划通过速度” car.v_target
         decisions = {}
+        car_decision = decide_car(car, world, cfg, rule)
+        decisions[car.name] = car_decision
+        car.mode = car_decision.mode
+        car.v_target = car_decision.v_target
         for ped in world.peds:
             decisions[ped.name] = decide_pedestrian(ped, world, cfg, rule)
-        decisions[car.name] = decide_car(car, world, cfg, rule)
 
         # ---- 2. 控制 -----------------------------------------------------
         for a in world.agents:
@@ -522,4 +528,5 @@ def simulate(
         ped_stop_time_total_s=round(sum(ped_stop_time.values()), 6),
     )
     return result, trace_df, ped_metrics
+
 

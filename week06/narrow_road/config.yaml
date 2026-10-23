@@ -103,6 +103,58 @@ rules:
     car_clearance: fixed
     car_c_req_m: 0.30
 
+  # ---------------------------------------------------------------------------
+  # 实验 2：速度相关个人空间 / 间隙接受模型（speed-dependent acceptance）
+  #
+  # 共享接受关系：c_acc(v) = car_c_min_m + car_c_per_mps * v
+  #   - 行人：横向余量 c >= c_acc(v_car) 时“接受”，继续贴着车走；
+  #           否则让行——纵向速度可降到 0（停在路缘等待），横向继续移到路缘。
+  #   - 车辆：允许速度 v_clear = car_speed_factor * (c - c_min) / k
+  #           即“行人当前能接受的间隙”所对应的速度，并再留 10% 余量。
+  # S_cons 与旧 R1 的车辆余量参数相同（0.05, 0.05），用于隔离“只改行人模型”的效果；
+  # S_mod / S_lib 逐步降低静止最小余量 c0，代表“慢车时可以贴得更近”的假设。
+  # ---------------------------------------------------------------------------
+  S_cons:
+    name: "速度相关接受（保守：与旧 R1 同一余量曲线 0.05+0.05v）"
+    ped_freeze_on_wait: false
+    ped_acceptance: speed
+    car_clearance: speed
+    car_c_min_m: 0.05
+    car_c_per_mps: 0.05
+    car_speed_factor: 0.9
+    car_approach_m: 12.0     # 提前 12 m 压到“行人可接受”的通过速度
+    risk_scaling: true
+  S_mod:
+    name: "速度相关接受（中等：静止 0.02 m，每 m/s 需 0.03 m）"
+    ped_freeze_on_wait: false
+    ped_acceptance: speed
+    car_clearance: speed
+    car_c_min_m: 0.02
+    car_c_per_mps: 0.03
+    car_speed_factor: 0.9
+    car_approach_m: 12.0
+    risk_scaling: true
+  S_lib:
+    name: "速度相关接受（激进：静止 0.01 m，每 m/s 需 0.02 m）"
+    ped_freeze_on_wait: false
+    ped_acceptance: speed
+    car_clearance: speed
+    car_c_min_m: 0.01
+    car_c_per_mps: 0.02
+    car_speed_factor: 0.9
+    car_approach_m: 12.0
+    risk_scaling: true
+  S_mod_nf:
+    name: "S_mod 但不做社会力风险缩放（模型消融）"
+    ped_freeze_on_wait: false
+    ped_acceptance: speed
+    car_clearance: speed
+    car_c_min_m: 0.02
+    car_c_per_mps: 0.03
+    car_speed_factor: 0.9
+    car_approach_m: 12.0
+    risk_scaling: false
+
 # -----------------------------------------------------------------------------
 # 两种运动模型（同一 Agent 框架的可插拔控制层）
 #   sfm:       社会力模型（Helbing 形式，加速度量纲）
@@ -116,6 +168,11 @@ models:
     ped_ped:  {A_mps2: 2.0, B_m: 0.30, aniso_lambda: 0.20}
     ped_car:  {A_mps2: 2.0, B_m: 0.25, aniso_lambda: 0.20}
     car_ped:  {A_mps2: 0.8, B_m: 0.25, aniso_lambda: 0.10}
+    # 实验 2：车辆对行人的“感知风险”随车速缩放（慢车 = 风险低 = 斥力弱），
+    # rho = clip((v_car/v0)^exponent, floor, 1)；仅在规则 risk_scaling=true 时启用。
+    risk_scaling:
+      exponent: 0.7
+      floor: 0.15
   wiedemann:
     T_s: 1.5              # 期望时间车头距
     s0_m: 1.0             # 静止最小净距

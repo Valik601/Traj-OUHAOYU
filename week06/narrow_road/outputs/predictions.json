@@ -13,7 +13,19 @@
     "A1_v_allow_mps": 11.0,
     "A2_c_req_m": 0.3,
     "A2_feasible": true,
-    "A2_v_allow_mps": 9.0
+    "A2_v_allow_mps": 9.0,
+    "S_cons_c_req_m": 0.05,
+    "S_cons_feasible": true,
+    "S_cons_v_allow_mps": 9.9,
+    "S_mod_c_req_m": 0.02,
+    "S_mod_feasible": true,
+    "S_mod_v_allow_mps": 17.4,
+    "S_lib_c_req_m": 0.01,
+    "S_lib_feasible": true,
+    "S_lib_v_allow_mps": 26.55,
+    "S_mod_nf_c_req_m": 0.02,
+    "S_mod_nf_feasible": true,
+    "S_mod_nf_v_allow_mps": 17.4
   },
   {
     "width_m": 3.5,
@@ -29,7 +41,19 @@
     "A1_v_allow_mps": 6.0,
     "A2_c_req_m": 0.3,
     "A2_feasible": true,
-    "A2_v_allow_mps": 9.0
+    "A2_v_allow_mps": 9.0,
+    "S_cons_c_req_m": 0.05,
+    "S_cons_feasible": true,
+    "S_cons_v_allow_mps": 5.4,
+    "S_mod_c_req_m": 0.02,
+    "S_mod_feasible": true,
+    "S_mod_v_allow_mps": 9.9,
+    "S_lib_c_req_m": 0.01,
+    "S_lib_feasible": true,
+    "S_lib_v_allow_mps": 15.3,
+    "S_mod_nf_c_req_m": 0.02,
+    "S_mod_nf_feasible": true,
+    "S_mod_nf_v_allow_mps": 9.9
   },
   {
     "width_m": 3.0,
@@ -45,7 +69,19 @@
     "A1_v_allow_mps": 1.0,
     "A2_c_req_m": 0.3,
     "A2_feasible": false,
-    "A2_v_allow_mps": 0.0
+    "A2_v_allow_mps": 0.0,
+    "S_cons_c_req_m": 0.05,
+    "S_cons_feasible": true,
+    "S_cons_v_allow_mps": 0.9,
+    "S_mod_c_req_m": 0.02,
+    "S_mod_feasible": true,
+    "S_mod_v_allow_mps": 2.4,
+    "S_lib_c_req_m": 0.01,
+    "S_lib_feasible": true,
+    "S_lib_v_allow_mps": 4.05,
+    "S_mod_nf_c_req_m": 0.02,
+    "S_mod_nf_feasible": true,
+    "S_mod_nf_v_allow_mps": 2.4
   },
   {
     "width_m": 2.8,
@@ -61,6 +97,18 @@
     "A1_v_allow_mps": 0.0,
     "A2_c_req_m": 0.3,
     "A2_feasible": false,
-    "A2_v_allow_mps": 0.0
+    "A2_v_allow_mps": 0.0,
+    "S_cons_c_req_m": 0.05,
+    "S_cons_feasible": false,
+    "S_cons_v_allow_mps": 0.0,
+    "S_mod_c_req_m": 0.02,
+    "S_mod_feasible": false,
+    "S_mod_v_allow_mps": 0.0,
+    "S_lib_c_req_m": 0.01,
+    "S_lib_feasible": false,
+    "S_lib_v_allow_mps": 0.0,
+    "S_mod_nf_c_req_m": 0.02,
+    "S_mod_nf_feasible": false,
+    "S_mod_nf_v_allow_mps": 0.0
   }
 ]

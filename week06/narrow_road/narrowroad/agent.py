@@ -94,6 +94,7 @@ class World:
     car: Agent
     peds: list[Agent] = field(default_factory=list)
     t: float = 0.0
+    rule: dict[str, Any] | None = None
 
     @property
     def agents(self) -> list[Agent]:

@@ -63,6 +63,13 @@ def sfm_force(agent: Agent, world: World, cfg: dict[str, Any]) -> np.ndarray:
         p = sfm["ped_car"]
         w = _aniso(e, to_other, float(p["aniso_lambda"]))
         mag = float(p["A_mps2"]) * math.exp(-max(clear, -0.3) / float(p["B_m"]))
+        # 实验 2：车辆对行人的感知风险随车速缩放（慢车斥力弱，行人可贴近穿行）
+        if world.rule is not None and world.rule.get("risk_scaling"):
+            rs = sfm.get("risk_scaling", {})
+            v_car = abs(world.car.vx)
+            rho = (v_car / max(world.car.v0, 1e-9)) ** float(rs.get("exponent", 0.7))
+            rho = min(1.0, max(float(rs.get("floor", 0.15)), rho))
+            mag *= rho
         force += mag * w * (-to_other)
 
         # --- 行人之间的斥力 ------------------------------------------------

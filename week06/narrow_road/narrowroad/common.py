@@ -84,15 +84,36 @@ def required_clearance(rule: dict[str, Any], speed_mps: float = 0.0) -> float:
     return float(rule["car_c_min_m"]) + float(rule["car_c_per_mps"]) * max(speed_mps, 0.0)
 
 
+def acceptance_clearance(rule: dict[str, Any], cfg: dict[str, Any], v_mps: float) -> float:
+    """行人在给定车速下愿意接受的横向身体余量。
+
+    - 固定个人空间（R0/R1/A1/A2）：与车速无关，取 pedestrians.c_pass_m（0.30 m）；
+    - 速度相关个人空间（S_*）：c_acc(v) = c0 + k·v，慢车时行人也愿意贴得很近。
+    """
+    if rule.get("ped_acceptance") == "speed":
+        return float(rule["car_c_min_m"]) + float(rule["car_c_per_mps"]) * max(v_mps, 0.0)
+    return float(cfg["pedestrians"]["c_pass_m"])
+
+
+def rule_clearance_curve(rule: dict[str, Any]) -> tuple[float, float] | None:
+    """速度相关规则的 (c0, k)；固定规则返回 None。"""
+    if rule.get("car_clearance") == "speed" or rule.get("ped_acceptance") == "speed":
+        return float(rule["car_c_min_m"]), float(rule["car_c_per_mps"])
+    return None
+
+
 def clearance_speed_cap(rule: dict[str, Any], clearance_m: float, v0: float) -> float:
     """给定规则下，车辆在横向余量为 c 时允许的最高车速。
 
     - fixed 规则：c >= c_req 才允许以 v0 通过，否则为 0（必须停车等待）。
-    - speed 规则：v_allow = (c - c_min) / k，c_min 为几何最小余量、k 为每 m/s 所需余量。
+    - speed 规则：v_allow = speed_factor · (c - c_min) / k；
+      speed_factor（默认 1）让车辆比“行人刚好能接受的速度”再慢一点，
+      避免车辆速度与行人接受阈值正好相等时的走/停抖动。
     """
     if rule["car_clearance"] == "fixed":
         return float(v0) if clearance_m >= float(rule["car_c_req_m"]) else 0.0
-    return max(0.0, (clearance_m - float(rule["car_c_min_m"])) / float(rule["car_c_per_mps"]))
+    cap = max(0.0, (clearance_m - float(rule["car_c_min_m"])) / float(rule["car_c_per_mps"]))
+    return cap * float(rule.get("car_speed_factor", 1.0))
 
 
 # ---------------------------------------------------------------------------

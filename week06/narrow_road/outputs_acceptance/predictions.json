@@ -1,0 +1,482 @@
+[
+  {
+    "rule": "R1",
+    "width_m": 2.8,
+    "c_avail_m": -0.0,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 2.82,
+    "c_avail_m": 0.01,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 2.84,
+    "c_avail_m": 0.02,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 2.86,
+    "c_avail_m": 0.03,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 2.88,
+    "c_avail_m": 0.04,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 2.9,
+    "c_avail_m": 0.05,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 2.95,
+    "c_avail_m": 0.075,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.5
+  },
+  {
+    "rule": "R1",
+    "width_m": 3.0,
+    "c_avail_m": 0.1,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 1.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 3.1,
+    "c_avail_m": 0.15,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 2.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 3.2,
+    "c_avail_m": 0.2,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 3.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 3.5,
+    "c_avail_m": 0.35,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 6.0
+  },
+  {
+    "rule": "R1",
+    "width_m": 4.0,
+    "c_avail_m": 0.6,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 11.0
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 2.8,
+    "c_avail_m": -0.0,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 2.82,
+    "c_avail_m": 0.01,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 2.84,
+    "c_avail_m": 0.02,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 2.86,
+    "c_avail_m": 0.03,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 2.88,
+    "c_avail_m": 0.04,
+    "predicted_pass": false,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 2.9,
+    "c_avail_m": 0.05,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 2.95,
+    "c_avail_m": 0.075,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.45
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 3.0,
+    "c_avail_m": 0.1,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 0.9
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 3.1,
+    "c_avail_m": 0.15,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 1.8
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 3.2,
+    "c_avail_m": 0.2,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 2.7
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 3.5,
+    "c_avail_m": 0.35,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 5.4
+  },
+  {
+    "rule": "S_cons",
+    "width_m": 4.0,
+    "c_avail_m": 0.6,
+    "predicted_pass": true,
+    "c0_m": 0.05,
+    "k_s_per_m": 0.05,
+    "l_crit_m": 2.9,
+    "allowed_speed_mps": 9.9
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 2.8,
+    "c_avail_m": -0.0,
+    "predicted_pass": false,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 2.82,
+    "c_avail_m": 0.01,
+    "predicted_pass": false,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 2.84,
+    "c_avail_m": 0.02,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 2.86,
+    "c_avail_m": 0.03,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 0.3
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 2.88,
+    "c_avail_m": 0.04,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 0.6
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 2.9,
+    "c_avail_m": 0.05,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 0.9
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 2.95,
+    "c_avail_m": 0.075,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 1.65
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 3.0,
+    "c_avail_m": 0.1,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 2.4
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 3.1,
+    "c_avail_m": 0.15,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 3.9
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 3.2,
+    "c_avail_m": 0.2,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 5.4
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 3.5,
+    "c_avail_m": 0.35,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 9.9
+  },
+  {
+    "rule": "S_mod",
+    "width_m": 4.0,
+    "c_avail_m": 0.6,
+    "predicted_pass": true,
+    "c0_m": 0.02,
+    "k_s_per_m": 0.03,
+    "l_crit_m": 2.84,
+    "allowed_speed_mps": 17.4
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 2.8,
+    "c_avail_m": -0.0,
+    "predicted_pass": false,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 2.82,
+    "c_avail_m": 0.01,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 0.0
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 2.84,
+    "c_avail_m": 0.02,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 0.45
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 2.86,
+    "c_avail_m": 0.03,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 0.9
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 2.88,
+    "c_avail_m": 0.04,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 1.35
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 2.9,
+    "c_avail_m": 0.05,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 1.8
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 2.95,
+    "c_avail_m": 0.075,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 2.925
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 3.0,
+    "c_avail_m": 0.1,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 4.05
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 3.1,
+    "c_avail_m": 0.15,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 6.3
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 3.2,
+    "c_avail_m": 0.2,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 8.55
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 3.5,
+    "c_avail_m": 0.35,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 15.3
+  },
+  {
+    "rule": "S_lib",
+    "width_m": 4.0,
+    "c_avail_m": 0.6,
+    "predicted_pass": true,
+    "c0_m": 0.01,
+    "k_s_per_m": 0.02,
+    "l_crit_m": 2.82,
+    "allowed_speed_mps": 26.55
+  }
+]

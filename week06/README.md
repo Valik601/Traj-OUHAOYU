@@ -2,11 +2,23 @@
 
 同一条无路口、无信号灯、无人行道的窄路上，少量行人沿 +x 步行，一辆汽车从右侧沿 −x 迎面驶来；行人可侧移，汽车只能减速/停车。实验用**同一个 Agent 框架**表征行人与车辆（参数不同），比较两种运动模型（社会力 SFM、Wiedemann 阈值模型）与两套交互规则（R0 基准、R1 修改），回答"道路多宽还能过、过不去是空间不够还是规则不合理"。
 
-**一页总览：[summary.png](narrow_road/outputs/figures/summary.png)（矢量版 [summary.pdf](narrow_road/outputs/figures/summary.pdf)）**
+本目录包含**两个递进实验**：
 
-![一页总览](narrow_road/outputs/figures/summary.png)
+| | 实验 1：固定个人空间 | 实验 2：速度相关的个人空间 |
+|---|---|---|
+| 行人模型 | 横向余量 ≥ 0.30 m 才继续走 | 接受关系 c_acc(v) = c0 + k·v；慢车时愿意贴近穿行，不接受时速度可降到 0 |
+| 可通行边界 | 2.90 m（R1）/ 3.40 m（R0） | **2.82 m（S_lib）/ 2.84 m（S_mod）**，逼近 2.80 m 几何极限 |
+| 3.0 m 车辆延误 | 25.5–29.8 s（R1） | **15.3 s（S_mod）/ 8.5 s（S_lib）** |
+| 3.0 m 行人停车总时长 | 18.5–21.2 s | **4.3 s（S_mod）/ 2.2 s（S_lib）** |
+| 报告 | [实验报告.md](narrow_road/report/实验报告.md) | [实验2_速度相关接受模型.md](narrow_road/report/实验2_速度相关接受模型.md) |
 
-详细报告：[narrow_road/report/实验报告.md](narrow_road/report/实验报告.md)；项目手册：[narrow_road/README.md](narrow_road/README.md)。
+**一页总览（实验 1）：[summary.png](narrow_road/outputs/figures/summary.png)**；**（实验 2）：[summary2.png](narrow_road/outputs_acceptance/figures/summary2.png)**
+
+![实验 1 总览](narrow_road/outputs/figures/summary.png)
+
+![实验 2 总览](narrow_road/outputs_acceptance/figures/summary2.png)
+
+详细报告：[实验 1](narrow_road/report/实验报告.md)、[实验 2](narrow_road/report/实验2_速度相关接受模型.md)；项目手册：[narrow_road/README.md](narrow_road/README.md)。
 
 ---
 
@@ -100,25 +112,61 @@
 
 ---
 
+## 3bis. 实验 2：车辆极慢时行人愿意贴近穿行（速度相关个人空间）
+
+实验 1 的固定 0.30 m 阈值无法表达"车速越慢、行人对间隙的容忍越小"。实验 2 把行人模型换成**共享的速度相关接受关系**：
+
+```
+c_acc(v) = c0 + k·v        （行人与车辆共享）
+```
+
+- **行人**：c ≥ c_acc(v_car) → 接受，贴着车继续走（PASS）；否则让行，**纵向速度降到 0**（STOP），横向继续移向路缘；用车辆"计划通过速度"判断，避免车辆还在减速时过早让行。
+- **车辆**：允许速度 `v_clear = 0.9·(c − c0)/k`，并提前 12 m 减速到位，让行人看到的是"已经慢下来"的车。
+- **SFM**：车辆对行人的斥力按车速缩放（感知风险）；但消融显示这只是二阶效应，**决定性的建模要素是决策层的间隙接受阈值**。
+
+三档敏感性：S_cons (0.05, 0.05) = 只换行人模型；S_mod (0.02, 0.03)；S_lib (0.01, 0.02)。
+
+| 结果 | R1（固定 0.30 m） | S_cons | S_mod | S_lib |
+|---|---|---|---|---|
+| 可通行边界 [m] | 2.90（严格大于） | 2.90 | **2.84** | **2.82** |
+| 3.0 m 车辆延误 [s]（Wied/SFM） | 25.5 / 29.8 | 27.9 / 26.8 | **15.3 / 14.5** | **8.5 / 8.1** |
+| 3.0 m 行人停车总时长 [s] | 18.5 / 21.2 | 5.6 / 4.9 | 4.3 / 3.7 | 2.2 / 1.7 |
+| 3.0 m 车辆最低速度 [m/s] | 1.19 / 0.97 | 1.09 / 0.87 | 2.59 / 2.38 | 4.24 / 4.03 |
+
+- **边界从 2.90 m 推进到 2.84 / 2.82 m，逼近 2.80 m 几何极限**；96/96 个（宽度×规则×模型）格子的解析预测与仿真一致。
+- 边界处的机制是**顺序通过**：车辆先停住（v=0），行人在 0.01–0.02 m 余量下从车侧走过，车辆再继续；因此边界处延误仍很大（31–39 s）——"能过"不等于"通行良好"。
+- **实测通过瞬间的 (车速, 余量) 点精确落在各自的接受曲线上**（图 4d），直接校验了模型；行人速度确实降到 0 再恢复。
+- 单因素分解：S_cons 与 R1 车辆规则相同，只改行人模型 → 行人停车从 18.5 s 降到 5.6 s、2.90 m 处由僵持变通过，但车辆延误基本不变；L=3.0 m 的车辆提速来自降低 c0（规则/工程决策），而 c0 的最小值必须由安全约束决定。
+- 宽路（3.5 / 4.0 m）不受损，延误不增反降（S_mod 2.67 / 1.07 s @4.0 m）。
+
+详见 [实验 2 报告](narrow_road/report/实验2_速度相关接受模型.md)。
+
+---
+
 ## 4. 如何运行
 
 ```powershell
 cd narrow_road
 python -m pip install -r requirements.txt
-python run_experiments.py          # 32 次仿真 + 指标 + 参数表 + 8 张图（约 6 s）
-python -m pytest -q                # 38 个测试（约 5 s）
+python run_experiments.py            # 实验 1：32 次仿真 + 指标 + 参数表 + 8 张图（约 6 s）
+python run_acceptance_experiment.py  # 实验 2：98 次仿真 + 指标 + 表 + 6 张图（约 8 s）
+python -m pytest -q                  # 55 个测试（约 6 s）
 ```
 
 | 产物 | 说明 |
 |---|---|
-| `narrow_road/outputs/metrics.csv` | 32 次仿真的汇总指标 |
+| `narrow_road/outputs/metrics.csv` | 实验 1：32 次仿真的汇总指标 |
 | `narrow_road/outputs/ped_metrics.csv` | 每名行人指标 |
 | `narrow_road/outputs/trajectories/*.csv` | 逐时刻轨迹 |
 | `narrow_road/outputs/initial_conditions.json` | 冻结的初始条件 |
 | `narrow_road/outputs/predictions.json` · `prediction_consistency.json` | 先预测（解析判据）与 16/16 一致性检查 |
 | `narrow_road/outputs/summary.json` | 报告用关键数字 |
 | `narrow_road/outputs/tables/*.md` | 几何/规则/模型/结果四张表 |
-| `narrow_road/outputs/figures/*.png,*.pdf` | 全部图（含一页总览） |
+| `narrow_road/outputs/figures/*.png,*.pdf` | 实验 1 全部图（含一页总览） |
+| `narrow_road/outputs_acceptance/metrics.csv` · `pass_events.csv` | 实验 2：98 次仿真指标 + 通过事件 |
+| `narrow_road/outputs_acceptance/predictions.json` · `prediction_consistency.json` | 实验 2 解析预测与 96/96 一致性 |
+| `narrow_road/outputs_acceptance/tables/A1–A3.md` | 实验 2 参数表 / 结果表 / 边界对照表 |
+| `narrow_road/outputs_acceptance/figures/*.png,*.pdf` | 实验 2 全部图（含一页总览 summary2） |
 
 ## 5. 目录结构
 
@@ -127,19 +175,23 @@ week06/
 ├── README.md                       # 本文件（总览与结论）
 └── narrow_road/
     ├── config.yaml                 # 全部参数（不写死在代码里）
-    ├── run_experiments.py          # 一键入口
-    ├── narrowroad/                 # common / agent / decision / controllers / simulate / experiments / tables / plotting
-    ├── tests/                      # 38 个测试
-    ├── report/实验报告.md           # 详细报告
-    └── outputs/                    # 运行产物
+    ├── run_experiments.py          # 实验 1 入口
+    ├── run_acceptance_experiment.py# 实验 2 入口
+    ├── narrowroad/                 # common / agent / decision / controllers / simulate / experiments / acceptance / tables / plotting / acceptance_plots
+    ├── tests/                      # 55 个测试（实验 1 + 实验 2）
+    ├── report/实验报告.md           # 实验 1 详细报告
+    ├── report/实验2_速度相关接受模型.md
+    ├── outputs/                    # 实验 1 产物
+    └── outputs_acceptance/         # 实验 2 产物
 ```
 
 ## 6. 可复现性与验证
 
-- 初始条件固定种子、仿真无随机数；`python -m pytest -q` 中的 `test_determinism` 校验两次运行指标与轨迹完全一致。
+- 初始条件固定种子、仿真无随机数；`test_determinism` 校验两次运行指标与轨迹完全一致。
 - `test_prediction_consistency_and_artifacts` 完整跑一遍 32 次矩阵，校验：16 个宽度×规则格子的解析预测与仿真结果一致、`metrics.csv` 内部一致（`margin = c_avail − c_req`、`delay = finish − free_flow`）、轨迹重算的通过时刻与指标一致（0.1 s 采样误差内）、`summary.json`/`predictions.json` 互相一致。
-- 安全不变量测试：任意时刻人车身体不重叠、行人不出路缘/不后退、车辆不侧移/不倒车、减速度不超过上限。
+- 实验 2 新增 `test_acceptance.py`：接受关系、允许速度、边界判据、行人 PASS/STOP 决策（含"速度降到 0"）、新模型与旧规则的对照、力缩放消融为二阶、旧实验结论不变（R1@3.0 m 延误 29.7667 s 精确复现）。
+- 安全不变量测试：任意时刻人车身体不重叠、行人不出路缘/不后退、车辆不侧移/不倒车、减速度不超过上限；实验 2 全部 98 次运行零碰撞。
 
 ## 7. 局限
 
-单一初始条件（固定种子）、3 名行人、1 辆车、单车道路段；行人决策阈值与模型参数为设定值，未经真实数据标定；车辆固定在中线且不能侧移（现实中司机会偏向一侧，临界宽度会更低）；Wiedemann 原为同向跟驰，已做显式简化推广；僵持判定采用"8 s 无净位移 + 40 m 车前行人窗口"口径，因此僵持时刻（≈90 s）晚于车辆实际停车时刻（≈22 s）。详见 [实验报告第 8 节](narrow_road/report/实验报告.md)。
+单一初始条件（固定种子）、3 名行人、1 辆车、单车道路段；行人决策阈值与模型参数为设定值，未经真实数据标定；车辆固定在中线且不能侧移（现实中司机会偏向一侧，临界宽度会更低）；Wiedemann 原为同向跟驰，已做显式简化推广；僵持判定采用"8 s 无净位移 + 40 m 车前行人窗口"口径，因此僵持时刻（≈90 s）晚于车辆实际停车时刻（≈22 s）。实验 2 的 c0/k 是三种假设值，需要真实"行人从慢车旁经过的横向间距"数据标定；"行人观察车辆计划速度"是简化假设。详见两篇报告的局限一节。
