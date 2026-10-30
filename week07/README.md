@@ -245,8 +245,7 @@ week07/                                # 仓库提交：README.md + results_all.
         ├── analyze_diagnostics.py     # 补充诊断脚本（提交）
         ├── tables.md / diagnostics.*  # 生成物（本地）
         ├── figures/                   # 9 类必做图 + 4 个 GIF（本地）
-        └── logs/                      # pytest / batch / audit 日志（本地）
-        └── logs/                      # pytest / batch / audit / 环境 / 代码 hash 日志
+        └── logs/                      # pytest / batch / audit / 环境 / 代码 hash 日志（本地）
 ```
 
 ---
