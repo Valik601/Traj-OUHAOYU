@@ -1,0 +1,11 @@
+# smoke 配置：用于运行成本估计与端到端联调，不冒充正式结果。
+# 场景使用开发种子 0、1（与正式场景 1000—1019 分离），其余协议参数与 default 相同。
+extends: default.yaml
+
+experiment:
+  name: uav_antipodal_v2_smoke
+
+scenes:
+  n_formal_scenes: 2
+  development_seeds: [0, 1]
+  formal_seeds: [0, 1]

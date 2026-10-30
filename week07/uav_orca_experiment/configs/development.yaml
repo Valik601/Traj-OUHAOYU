@@ -1,0 +1,9 @@
+# 开发集配置：正式运行前的排错、候选分辨率与数值设置评估（种子 0—4）。
+extends: default.yaml
+
+experiment:
+  name: uav_antipodal_v2_development
+
+scenes:
+  n_formal_scenes: 5
+  formal_seeds: [0, 1, 2, 3, 4]

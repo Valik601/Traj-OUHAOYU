@@ -1,0 +1,6 @@
+# 有界敏感性配置：基座协议同 default；每个 block 由 runner 施加单因素 override。
+# 固定子集：种子 1000—1004（scenes.sensitivity_seeds）。
+extends: default.yaml
+
+experiment:
+  name: uav_antipodal_v2_sensitivity

@@ -1,0 +1,64 @@
+# 主实验默认参数（handoff §2.1）。本文件是 full/smoke/sensitivity 的继承基座。
+# 仅修改此处会同时影响所有 profile → 正式运行前必须冻结（experiment_manifest.json）。
+schema_version: 1
+
+experiment:
+  name: uav_antipodal_v2
+  observation_time: 120.0
+  dt: 0.1
+
+simulation:
+  n_agents: 100
+  radius: 0.5
+  d_safe: 1.0
+  d_plan: 1.0
+  init_sphere_radius: 20.0
+  v_max: 2.0
+  goal_tolerance: 0.3
+  center_tolerance: 0.1
+  initial_velocity: zero
+  neighbor_mode: all
+  neighbor_range: null
+  perturbation:
+    mode: tangential_gaussian
+    max_angle_deg: 2.0
+    resample_max: 100
+
+planners:
+  candidate:
+    directions: 128
+    speed_layers: [0.5, 1.0, 2.0]
+    include_zero: true
+    include_current: true
+    include_pref: true
+  vo:
+    tau: 5.0
+  rvo:
+    tau: 5.0
+  orca:
+    tau: 5.0
+  backend: auto
+
+scheduling:
+  delta: 0.75
+  order: random_stream_0
+
+metrics:
+  eps_distance: 1.0e-8
+  stall_window: 5.0
+  stall_path_threshold: 0.1
+  stall_waypoint_threshold: 0.1
+  bootstrap_resamples: 10000
+  bootstrap_seed: 20261030
+
+scenes:
+  base_seed: 1000
+  n_formal_scenes: 20
+  development_seeds: [0, 1, 2, 3, 4]
+  formal_seeds: [1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009,
+                 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019]
+  sensitivity_seeds: [1000, 1001, 1002, 1003, 1004]
+
+models:
+  A: [direct, vo, rvo, orca]
+  B: [direct, vo, rvo, orca, orca_release, direct_release]

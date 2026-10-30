@@ -1,0 +1,6 @@
+# 正式 A/B 主实验配置：完整继承 default.yaml（正式运行前冻结）。
+# 200 次 = A: 20 场景 × 4 模型 + B: 20 场景 × 6 模型。
+extends: default.yaml
+
+experiment:
+  name: uav_antipodal_v2_formal

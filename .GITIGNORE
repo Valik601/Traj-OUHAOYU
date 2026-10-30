@@ -13,3 +13,23 @@ week05/NGSIM_CarFollowing/outputs
 week06/narrow_road
 week06/make_overview.py
 week06/RESULTS.md
+
+# week07 提交范围：README.md + results_all.png + 可复现代码（uavbench/ 源码、configs、tests、文档）
+# 以下为本地生成物/设计阶段产物，提交时排除
+week07/HANDOFF_*.md
+week07/outputs/
+week07/results_all.pdf
+week07/uav_orca_experiment/.venv/
+week07/uav_orca_experiment/results/
+week07/uav_orca_experiment/scenes/
+week07/uav_orca_experiment/reports/figures/
+week07/uav_orca_experiment/reports/logs/
+week07/uav_orca_experiment/reports/experiment_report.md
+week07/uav_orca_experiment/reports/tables.md
+week07/uav_orca_experiment/reports/diagnostics.md
+week07/uav_orca_experiment/reports/diagnostics.json
+
+# Python 缓存（任意周）
+__pycache__/
+*.py[cod]
+.pytest_cache/
